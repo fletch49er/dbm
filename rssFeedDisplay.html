@@ -1,0 +1,68 @@
+<?php
+public class CorsResponseFilter implements ContainerResponseFilter {
+@Override
+public void filter(ContainerRequestContext requestContext,   ContainerResponseContext responseContext)
+    throws IOException {
+        responseContext.getHeaders().add("Access-Control-Allow-Origin","*");
+        responseContext.getHeaders().add("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT");
+
+  }
+}
+?>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>RSS Feed Display Test</title>
+<meta name="description" content="RSS Feed Display Test">
+<meta name="author" content="fletch" >
+
+<link rel="stylesheet" href="css/styles.css?v=1.0">
+
+<!-- add jquery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--
+<script src="jquery.js"></script>
+-->
+
+</head>
+
+<body>
+<h3>RSS Feed Display Test</h3>
+<script>
+var urlFeed ='https://blog.codeclub.org.uk/feed/';
+
+$(document).ready(function() {
+    //feed to parse
+    var feed = "https://blog.codeclub.org.uk/feed/?format=xml";
+    
+    $.ajax(feed, {
+        accepts:{
+            xml:"application/rss+xml"
+        },
+        dataType:"xml",
+        success:function(data) {
+            //Credit: http://stackoverflow.com/questions/10943544/how-to-parse-an-rss-feed-using-javascript
+
+            $(data).find("item").each(function () { // or "item" or whatever suits your feed
+                var el = $(this);
+                console.log("------------------------");
+                console.log("title      : " + el.find("title").text());
+                console.log("link       : " + el.find("link").text());
+                console.log("description: " + el.find("description").text());
+            });
+    
+
+        }   
+    });
+    
+});
+document.write('<p>What\'s displayed from '+urlFeed+'?</p>')
+</script>
+	
+ <script src="js/scripts.js"></script>
+	
+</body>
+</html>

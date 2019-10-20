@@ -1,0 +1,577 @@
+/* colour pallette ******************/
+/* background colours */
+$bg-color1: #28170b;	// dark ochre
+$bg-color2: #664C06;	// ochre
+$bg-color3: #45a049;	// green
+$bg-color4: #4caf50;	// slightly darker green
+$bg-color5: #06333f;	// darkblue
+
+/* text and border colours */
+$color1: #fff;			// white
+$color2: #ffbf10; 	// amber
+$color3: #ccf;			// light-blue
+$color4: #f00;			// red
+$color5: #947729;		// ochre
+$color6: #a18f34;		// light ochre
+$color7: #ccc;			// grey
+
+
+/* fonts and texts ******************/
+/* fonts */
+$main-font: eurostile, arial, helvetica, sans-serif;
+
+/* text sizes */
+$text-size1: 20px;
+$text-size2: 18px;
+$text-size3: 14px;
+$text-size4: 12px;
+
+
+/* <div> overflow fix ******************/
+.clearfix::after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/* custom font faces ******************/
+@font-face {
+	font-family: 'eurostile';
+	src: url('../fonts/eurostile/eurosti.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/eurostile/eurosti.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	     url('../fonts/eurostile/eurosti.ttf')  format('truetype');
+}
+
+/* General page styling ******************/
+body, header, #wrapper, #sidebar, #main, footer {
+	font-family: $main-font;
+}
+body, #wrapper { 
+	background-color: $bg-color1;
+}
+header, footer {
+	background-color: $bg-color2,
+}
+body, #main {
+	font-size: $text-size3;
+}
+body {
+	margin: 5px 0;
+}
+h1 {
+	font-size: $text-size1;
+}
+h2, #navigation {
+	font-size: $text-size2;
+}
+#wrapper, header, footer {
+    max-width: 960px;
+    color: $color1;
+}
+#wrapper {
+    margin: 0 auto ;
+}
+#sidebar a:link, #sidebar a:visited, #main a:link, #main a:visited, 
+#navBar a:link, #navBar a:visited {
+	text-decoration: none;
+	color: $color2;
+}
+#ftrNavBar a:link, #ftrNavBar a:visited, #dbmNotice a:link, #dbmNotice a:visited,
+#policy a:link, #policy a:visited, 
+#news a:link, #news a:visited  {
+	text-decoration: underline;
+	color: $color3;
+}
+#sitemap a:link, #sitemap a:visited {
+	text-decoration: underline;
+	color: $color1;
+}
+#sidebar a:hover, #main a:hover, #navBar a:hover, 
+#ftrNavBar a:hover, #dbmNotice a:hover {
+	color: $color4;
+}
+#policy a:hover, #news a:hover  {
+	color: $color2;
+}
+#sitemap a:hover {
+	color: $color3;
+}
+
+/* header styling ******************/
+header {
+	height: 100px;
+	border-radius: 100px 0 0 0;
+}
+#dbmLogo {
+	position: relative;
+	top: 35px;
+	left: 150px;
+}
+#dbmGraphic {
+	position: absolute;
+}
+
+/* content styling ******************/
+#content {
+	display: block;
+	margin: 0px;
+	background-image: url('../images/sidebar_background.png');
+  background-repeat: repeat-y;
+  background-position: left;
+}
+#content, #main {
+   min-height: 570px;
+}
+
+/* sidebar styling ******************/
+#sidebar {
+	display: inline-block;
+  padding-top: 5px;
+	width: 22.5%;
+  float: left;
+}
+#address {
+	position: relative;
+	z-index: 1;
+	max-width: 215px;
+	padding: 10px auto;
+	color: 	$color5;
+  font-style: italic;
+	font-size: small;
+	text-align: right;
+}
+.sideImg {
+	margin: 15px 0px 15px 15px;
+  max-width: 93%;
+}
+
+/* main styling ******************/
+#main {
+	display: inline-block;
+	width: 76%;
+	padding-left: 10px;
+  position: relative;
+}
+#contact, #sitemap, #policy, #priceBlock, .web  {
+	margin-left: 30px;
+}
+#navBar, #sitemap, #policy {
+	max-width: 100%;
+}
+#main, #sub_main {
+	margin: 0px;
+	min-height: 550px;
+}
+
+/*navBar styling ******************/
+#navBar {
+	height: $text-size1;
+}
+#navigation {
+	margin: 0;
+	text-align: right;
+	word-spacing: 0.5em;
+}
+
+/* footer styling ******************/
+footer {
+	margin: 0;
+	background-position: right;
+	border-radius: 0 0 45px 0;
+	margin-top: 10px;
+	height: 50px;
+	font-size: $text-size4;
+}
+#ftrNavBar {
+	width: 400px;
+	height: 50px;
+	padding-left: 5px;
+	line-height: 1.75em;
+	float: left;
+}
+#copyright {
+	font-size: 0.85em;
+	color: $color1;
+}
+#ftrButtons {
+	width: 110px;
+	margin: 9px 20px auto 0px;
+	float: right;
+}
+.ftrBox {
+	display: inline;
+	border-style: none;
+}
+#dbmNotice {
+	margin: 0 40px;
+	padding: 5px 0;
+	font-size: 10px;
+	text-align: right;
+	color: $color2;
+}
+.current {
+	color: $color3; 
+}
+.slash	{
+	color: $color6; 
+}
+
+/* website page styling ******************/
+#image1 {
+	vertical-align: bottom;
+	float: right;
+	padding: 10px 0 20px 30px;
+}
+.web, #priceBlock {
+	text-align: justify;
+	line-height: 1.5em;
+}
+ul.web {
+	text-align: left;
+	line-height: 1.5em;
+	color: $color6;
+}
+.imgBrdr {
+	margin-top: 5px;
+	border-width: 2px solid #ccf; /*light-blue*/
+	max-width: 100%;
+	height: auto;
+}
+
+/* news page styling ******************/
+#sub_main > h2 {
+	font-size: 14px;
+}
+#twtrWidget {
+	vertical-align: top;
+	margin: 10px 0 auto 10px;
+}
+#twtrWidget > a {
+  data-width: 220px;
+  data-height: 425px;
+  data-theme: dark;
+  data-link-color: $color6;
+}
+.twitter-timeline {
+    
+}
+#news {
+	text-align: left;
+	line-height: 1.25em;
+	color: $color2;
+	margin-bottom: 0;
+}
+#news > p {
+	margin-top: 0;
+	margin-left: 30px;
+	text-align: left;
+}
+
+/* case-studies page styling ******************/
+#csTable {
+	margin: 0 auto 20px 30px;
+	max-width: 100%;	
+}
+
+#csTable > table.caseStudy{
+}
+#csTable > td.caseStudy {
+	padding: 5px;
+}
+#imgPanel {
+  margin: 20px auto;
+	display: -webkit-flex; /* Safari */
+  -webkit-flex-flow: row wrap; /* Safari 6.1+ */
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+.image {
+	display: inline-block;
+	-webkit-flex: auto; /* Safari 6.1+ */
+	-ms-flex: auto; /* IE 10 */ 
+	flex: auto;
+}
+img.caseStudy {
+	width: 175px;
+	border: none;
+}
+
+/*design page styling */
+#priceBlock {
+	margin: auto;
+}
+sup {
+	vertical-align: super;
+  font-size: small;
+}
+sup, #pricingBlock, .pricing {
+	font-family: $main-font;
+}
+.pricing {
+	float: left;
+	width: 195px;
+	height: 140px;
+	background-color: $bg-color5;
+	margin: 10px 0 10px 16px;
+	padding: 10px 15px;
+	text-align: center;
+	color: $color1;
+}
+.description {
+	font-size: 24px;
+}
+.price {
+	font-size: 48px;
+	line-height: 60px;
+}
+
+/* Contact Page styling ******************/
+#contact, #contact > p	{
+	text-align: left;
+}
+#myPhoto {
+	margin: 15px 0 15px 15px;
+	width: 180px;
+	height: 180px;
+	padding-right: 5px;
+	padding-bottom: 10px;
+	float: right;
+}
+#myTitle {
+  text-align: right;
+}
+form > * {
+  box-sizing: border-box;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid $color7;
+  border-radius: 4px;
+  resize: vertical;
+}
+label {
+  padding: 5px 5px 5px 0;
+  display: inline-block;
+}
+input[type=submit] {
+  background-color: $bg-color4;
+  color: $color1;
+  margin-right: 10%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+input[type=submit]:hover {
+  background-color: $bg-color3;
+}
+
+.col-15, .col-75, .col-85, .col-error {
+  float: left;
+  margin-top: 5px;
+}
+.col-15 {
+  width: 15%;
+}
+.col-75 {
+  width: 75%;
+}
+.col-85 {
+  width: 85%;
+}
+.col-error {
+  width: 5%;
+  margin-left: 3%;
+  padding: 5px 0 ;
+}
+#frmButtons {
+	
+}
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.valid {
+	border: solid 2px $color7;
+	border-radius: 5px;
+}
+.padded {
+	padding-top: 20px;
+}
+
+/* site map page styling ******************/
+#sitemap {
+	line-height: 1.5em;
+}
+
+/* policy page styling ******************/
+#policy {
+	text-align: left;
+	font-size: $text-size4;
+}
+#policy > h2, #policy > h3, #policy > h4,
+#sitemap > h2, #sitemap > h3, #sitemap > h4,
+#policy > ul > li:before, #sitemap > ul > li:before,
+.highlight {
+	color: $color3;
+}
+#policy > ul, #sitemap > ul {
+	list-style: none;
+  list-style-position: outside;
+     
+}
+#policy > ul > li:before, #sitemap > ul > li:before {
+  content:'\25A0'; /* a square bullet */
+  display: block;
+  position: relative;
+  max-width: 0px;
+  max-height: 0px;
+  left: -10px;
+  top: 2px;
+  font-size: 7px;
+}
+#privacy {
+	float: right;
+}
+
+/* Unsubscribe + 404 Page styling ******************/
+#unsubscribe, #html404 {
+	text-align: left;
+	line-height: 1.5em;
+	margin-left: 60px;
+}
+#unsubscribe {
+	color: $color2
+}
+.error {
+	color: $color4;
+}
+#graphic404 {
+	position: relative;
+	top: 90px;
+	left: 90px;
+}
+#emoticon404 {
+	width: 200px;
+	position: absolute;
+	z-index: 1;
+	top: 250px;
+	left: 225px;
+}
+
+/* responsive style amendments ******************/
+@media only screen and (max-width: 800px) {
+	ul.web {
+		text-align: left;
+	}
+  #sub_main > p {
+    padding-right: 10px;
+  }
+  #navigation{
+   	font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+	#s {
+   	border: 1px solid green;
+  }
+	/* header styling */
+  #dbmLogo {
+		position: relative;
+		z-index: 1;
+		top: 35px;
+		left: 5px;
+	}
+	#dbmGraphic {
+		z-index: 0;
+	}
+    
+	/* main content styling */
+	#content {
+    
+	}
+  #sidebar {
+   	margin-top: 100px;
+    padding: 0 10px 0 10px;
+   	display: block;
+    max-width: initial;
+    width: 100%;
+    float: none;
+    min-height: auto;
+  }
+	#address, #sidebar > img {
+		display: none;
+	}
+  #main {
+    margin: 0;
+    padding-right: 10px;
+    width: 100%;
+  }
+  #image1 {
+    float: none;
+    margin: 0 auto 0 auto;
+    padding: 10px 0 20px 0;
+	}
+	
+	/*navBar styling */
+	#navigation {
+		display: none;
+	}
+    
+	/* foooter styling */
+	footer {
+		height: auto;
+	} 
+	footer {
+    border-radius: 0;
+  }
+	#ftrNavBar, #ftrButtons {
+		float: none;
+	}
+  #copyright {
+    
+  }
+  #dbmNotice {
+    margin: 0;
+    text-align: left;
+  }
+	
+	/* website page styling */
+	.web {
+		margin-left: 0;
+	}
+    
+  /* news page styling */
+  #twtrWidget {
+   margin-left: 35%;
+  }
+
+	/* contacts page styling */
+  .col-15, .col-85, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+  }
+  .col-75 {
+    width: 90%;
+    margin-top: 0;
+  }
+  .col-error {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+
+	/* website page styling */
+  #main {
+    width: 100%;
+	}
+}
