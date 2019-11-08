@@ -12,11 +12,12 @@
  * Revision:
  *		18.04.2013	1st issue.
  *		03.05.2016	address data moved to external file
- *		18.04.2018  header and footer data moved to external files	
+ *		18.04.2018  header and footer data moved to external files
+ *		29.10.2019	image carousel block added
  *
  *******************************************************************************
 */
-
+//add header template
 require_once('header.php'); 
 ?>
 <div id="sidebar">
@@ -31,9 +32,28 @@ require_once('header.php');
 <div id="sub_main">
 <h1>web design, web application design and development</h1>
 
-<div id="image1">
-<img class="imgBrdr" src="images/concept.png" width="395" height="300" title="Concept Art - Daisy Duck Designs" alt="Daisy Duck Designs Concept Art" />
-</div><!-- end #image1 -->
+<div id="carousel">
+  <div id="c_images">
+  	<a href="images/carousel/image01.jpg" target="_blank"><img src="images/carousel/image01.jpg" alt="image1" /></a>
+    <noscript>
+    	<a href="images/carousel/image01.jpg" target="_blank"><img src="images/carousel/image01.jpg" alt="image1" /></a>
+    </noscript>
+  </div><!-- end #c_images -->
+  <div id="c_controls">
+  	<div id="c_icons">
+    
+    </div><!-- end #c_icons -->
+    <div id="c_count">
+    
+    </div><!-- end #c_count -->
+  </div><!-- end #c_controls -->
+  <script>
+    //create control icons
+  	plus_divs(slide_index);
+    //automatic rotate images
+    setInterval(function(){plus_divs('+')}, 7000);
+  </script>
+</div><!-- end #carousel -->
 <p class="web"><strong>designs by mark</strong> are website designers who can build affordable web related services to your specifications, which offers full control over; how your website looks; how it is accessed and utilised; and how it works within your current business plan.</p>
 <ul class="web">
 <li>static website design</li>

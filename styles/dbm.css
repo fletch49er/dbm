@@ -186,11 +186,6 @@ footer {
   color: #a18f34; }
 
 /* website page styling ******************/
-#image1 {
-  vertical-align: bottom;
-  float: right;
-  padding: 10px 0 20px 30px; }
-
 .web, #priceBlock {
   text-align: justify;
   line-height: 1.5em; }
@@ -259,7 +254,7 @@ ul.web {
   flex: auto; }
 
 img.caseStudy {
-  width: 100px;
+  width: 175px;
   border: none; }
 
 /*design page styling */
@@ -461,11 +456,6 @@ input[type=submit]:hover {
     margin: 0;
     padding-right: 10px;
     width: 100%; }
-
-  #image1 {
-    float: none;
-    margin: 0 auto 0 auto;
-    padding: 10px 0 20px 0; }
 
   /*navBar styling */
   #navigation {

@@ -12,25 +12,25 @@
  * Revision:
  *		18.04.2018	1st issue.
  *		23.11.2018	meta viewport tab added
- *
+ *		29.10.2019	references to external javascript and css files for new
+ *								image carousel function added.
  *******************************************************************************
 */
-// include login constants
+//include login constants
 include 'php/db_login.php';
 
-// include php functions
+//include php functions
 include "php/dbm_functions.php";
 
-// include php functions
+//include php data files
 include "php/data.php";
 
-// connect to database	
+//connect to database	
 try {
 	$pdo = new PDO('mysql:host='.AUTH_HOST.'; dbname='.AUTH_DB.'', AUTH_USER, AUTH_PWD);
 } catch (PDOException $e) {
 	die("ERROR!: Could not connect: " . $e->getMessage());
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,14 +46,20 @@ try {
 
 <title>designs by mark - <?php echo metaFill('title'); ?></title>
 
+<!--Get your code at fontawesome.com-->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
 <!-- external javascript files -->
 <script src="js/dbm_functions.js"></script>
+<script src="js/imageCarousel.js"></script>
 
 <!-- external font awesome 4 icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
 <!-- external stylesheet files -->
 <link rel="stylesheet" type="text/css" href="styles/dbm.css"  />
+<!-- include carousel stylesheet -->
+<link rel="stylesheet" type="text/css" href="styles/carousel.css" />
 
 <!-- favicon file -->
 <link rel="Shortcut Icon" href="favicon.ico" />
