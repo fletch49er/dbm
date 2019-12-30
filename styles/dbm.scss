@@ -21,10 +21,16 @@ $color7: #ccc;			// grey
 $main-font: eurostile, arial, helvetica, sans-serif;
 
 /* text sizes */
-$text-size1: 20px;
-$text-size2: 18px;
-$text-size3: 14px;
-$text-size4: 12px;
+$text-size48: 48px;
+$text-size24: 24px;
+$text-size20: 20px;
+$text-size18: 18px;
+$text-size16: 16px;
+$text-size14: 14px;
+$text-size12: 12px;
+$text-size10: 10px;
+$text-size7: 7px;
+
 
 
 /* <div> overflow fix ******************/
@@ -55,23 +61,23 @@ header, footer {
 	background-color: $bg-color2,
 }
 body, #main {
-	font-size: $text-size3;
+	font-size: $text-size14;
 }
 body {
 	margin: 5px 0;
 }
 h1 {
-	font-size: $text-size1;
+	font-size: $text-size20;
 }
-h2, #navigation {
-	font-size: $text-size2;
+h2, #navBar {
+	font-size: $text-size18;
 }
 #wrapper, header, footer {
-    max-width: 960px;
-    color: $color1;
+  max-width: 960px;
+  color: $color1;
 }
 #wrapper {
-    margin: 0 auto ;
+  margin: 0 auto ;
 }
 #sidebar a:link, #sidebar a:visited, #main a:link, #main a:visited, 
 #navBar a:link, #navBar a:visited {
@@ -167,7 +173,7 @@ header {
 
 /*navBar styling ******************/
 #navBar {
-	height: $text-size1;
+	height: 20px;
 }
 #navigation {
 	margin: 0;
@@ -176,23 +182,27 @@ header {
 }
 
 /* footer styling ******************/
+#ftrNavigation, #copyright, #dbmNotice {
+	font-size: $text-size10;
+}
+
 footer {
 	margin: 0;
 	background-position: right;
 	border-radius: 0 0 45px 0;
 	margin-top: 10px;
 	height: 50px;
-	font-size: $text-size4;
+	font-size: $text-size12;
 }
 #ftrNavBar {
 	width: 400px;
 	height: 50px;
 	padding-left: 5px;
 	line-height: 1.75em;
+  word-spacing: 0.5em;
 	float: left;
 }
 #copyright {
-	font-size: 0.85em;
 	color: $color1;
 }
 #ftrButtons {
@@ -207,7 +217,6 @@ footer {
 #dbmNotice {
 	margin: 0 40px;
 	padding: 5px 0;
-	font-size: 10px;
 	text-align: right;
 	color: $color2;
 }
@@ -237,7 +246,7 @@ ul.web {
 
 /* news page styling ******************/
 #sub_main > h2 {
-	font-size: 14px;
+	font-size: $text-size14;
 }
 #twtrWidget {
 	vertical-align: top;
@@ -316,10 +325,10 @@ sup, #pricingBlock, .pricing {
 	color: $color1;
 }
 .description {
-	font-size: 24px;
+	font-size: $text-size24;
 }
 .price {
-	font-size: 48px;
+	font-size: $text-size48;
 	line-height: 60px;
 }
 
@@ -409,7 +418,7 @@ input[type=submit]:hover {
 /* policy page styling ******************/
 #policy {
 	text-align: left;
-	font-size: $text-size4;
+	font-size: $text-size14;
 }
 #policy > h2, #policy > h3, #policy > h4,
 #sitemap > h2, #sitemap > h3, #sitemap > h4,
@@ -430,7 +439,7 @@ input[type=submit]:hover {
   max-height: 0px;
   left: -10px;
   top: 2px;
-  font-size: 7px;
+  font-size: $text-size7;
 }
 #privacy {
 	float: right;
@@ -470,7 +479,7 @@ input[type=submit]:hover {
     padding-right: 10px;
   }
   #navigation{
-   	font-size: 16px;
+   	font-size: $text-size16;
   }
 }
 

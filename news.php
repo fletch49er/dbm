@@ -11,6 +11,8 @@
  *
  * Revision:
  *		18.04.2018	1st issue.
+ *		30.12.2019	Navbar page removed. New create_navbar() function and 
+ *								navigation div added
  *
  *******************************************************************************
 */
@@ -49,7 +51,9 @@ if ($result = $pdo->query($sql)) {
 </div><!-- end #sub_main -->
 
 <div id="navBar">
-<?php require_once("navBar.php"); ?>
+<div id="navigation">
+<?php echo create_navbar($navbarData, '|'); ?>
+</div><!-- end #navigation -->
 </div> <!-- end #navBar -->
 </div> <!-- end #main-->
 

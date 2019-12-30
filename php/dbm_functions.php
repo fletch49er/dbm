@@ -33,6 +33,30 @@ function metaFill($filter) {
 	endif;
 	return $text;
 }
+/*
+ * ===================================================================
+ * Function:	create_sitemap()
+ * Purpose:		function to sitmap list
+ * Author:		Mark Fletcher
+ * Date:			06.08.2019
+ * 
+ * Input:			
+ * $data	- a selected data array
+ * 
+ * Output:		
+ * 	Returns $list - a fully constructed HTML list
+ * 
+ * Notes:
+ *
+ * ==================================================================
+*/
+function create_serviceslist($data) {
+	$services ='';
+	foreach($data as $service) { 	
+  	$services .= '<li>'.$service.'</li>'.PHP_EOL;
+	}
+  return $services;
+}
 
 /*
  * ===================================================================
@@ -47,24 +71,48 @@ function metaFill($filter) {
  * 
  * Output:		
  * 	Returns $newNavbar - a fully constructed navigation bar string
+ *											 with current page highlighting
  * 
  * Notes:
  *
  * ==================================================================
 */
 function create_navbar($navbarData, $separator) {
-	// dispaly navbar
-    $counter = 1;
-    $newNavbar ='';
-    foreach($navbarData as $link => $url) {
-        if ($counter != count($navbarData)) {
-    			$newNavbar .= '<a href="'.$url.'" title="link to '.strtolower($link).' page">'.$link.'</a>&nbsp;&nbsp;'.$separator.'&nbsp;'.PHP_EOL;
-    			$counter++;
-        } else {
-    			$newNavbar .= '<a href="'.$url.'" title="link to '.strtolower($link).' page">'.$link.'</a>'.PHP_EOL;
-        }
+  //alter title for index page or case-study-detail page
+  //for purposes of page highlight check
+  $pageTitle = pageName($_SERVER['PHP_SELF']);
+ //alter index to home
+  if ($pageTitle == 'index'){
+  	$pageTitle = 'home';
+  }
+  //alter case-study-details to case-studies
+  if ($pageTitle == 'case-study-details'){
+  	$pageTitle = 'case-studies';
+  }
+  //dispaly navbar
+  $counter = 1;
+  $separator = '&nbsp;'.$separator;
+  $newNavbar = '';
+  foreach($navbarData as $link => $url) {
+  	//set current page highlight
+  	$pattern = '/^'.$link.'/';
+    if (preg_match($pattern, $pageTitle, $matches)) {
+    	//link highlighted
+    	$navLink = '<span class="current">'.$link.'</span>';
+    } else {
+    	//link not highlighted
+    	$navLink = $link;
     }
-	return $newNavbar; 
+    //build navbar string
+    if ($counter != count($navbarData)) {
+    	$newNavbar .= '<a href="'.$url.'" title="link to '.strtolower($link).' page">'.$navLink.'</a>'.$separator.PHP_EOL;
+  		$counter++;
+    } else {
+    	//last navbar link
+  		$newNavbar .= '<a href="'.$url.'" title="link to '.strtolower($link).' page">'.$navLink.'</a>'.PHP_EOL;
+    }
+  }
+  return $newNavbar; 
 }
 
 /*
@@ -75,11 +123,10 @@ function create_navbar($navbarData, $separator) {
  * Date:			06.08.2019
  * 
  * Input:			
- * $navbarData	- a selected data array
- * $separator	- e.g. '|', ' ', ':'
+ * $data	- a selected data array
  * 
  * Output:		
- * 	Returns $newNavbar - a fully constructed navigation bar string
+ * 	Returns $list - a fully constructed HTML list
  * 
  * Notes:
  *
@@ -87,7 +134,7 @@ function create_navbar($navbarData, $separator) {
 */
 function create_sitemap($data) {
 	$sitemap ='';
-	foreach($data as $page => $url) {
+	foreach($data as $page => $url) { 	
   	$sitemap .= '<li><a href="'.$url.'" title="open '.$page.' page">'.$page.' page</a></li>'.PHP_EOL;
 	}
   return $sitemap;

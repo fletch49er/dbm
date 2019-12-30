@@ -12,10 +12,24 @@
  *
  * Revision:
  *		30.07.2019	1st issue.
+ *		30.12.2019	$servicesData array added
  *
  * ========================================================================
 */
-// navbar array setting link name and URL
+//services offered array
+$servicesData = [
+	'static website design',
+	'dynamic website design',
+	'website development',
+	'website maintenance',
+	'web application design',
+	'web application development',
+	'e-commerce development',
+	'search engine optimization (seo)',
+	'corporate logos and graphics'
+];
+
+//navbar array setting link name and URL
 $navbarData = [
 	'home' => 'index.php',
 	'news' => 'news.php',
@@ -25,7 +39,7 @@ $navbarData = [
 	'contact' => 'contact.php'
 ];
 
-// policies t&cs data array
+//policies t&cs data array
 $policyData = [
 	'site map' => 'sitemap.php',
 	'terms &amp; conditions' => 'policy.php?policy=termsConditions',
@@ -34,7 +48,7 @@ $policyData = [
 	'copyright' => 'policy.php?policy=copyright'
 ];
 
-// social media data array
+//social media data array
 $socialMedia = [
 	'Twitter' => ['fa fa-twitter', 'https://www.twitter.com/dbm_web'],
 	'Facebook' => ['fa fa-facebook', 'https://www.facebook.com/designsbymark'],

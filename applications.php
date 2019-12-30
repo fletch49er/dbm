@@ -11,6 +11,8 @@
  *
  * Revision:
  *		03.05.2016	1st issue.
+ *		30.12.2019	Navbar page removed. New create_navbar() function and 
+ *								navigation div added
  *		
  *
  *******************************************************************************
@@ -43,7 +45,9 @@ include 'header.php';
 </div><!-- end #main-->
 
 <div id="navBar">
-<?php include 'navBar.php'; ?>
+<div id="navigation">
+<?php echo create_navbar($navbarData, '|'); ?>
+</div><!-- end #navigation -->
 </div><!-- end #navBar -->
 
 <?php include 'footer.php'; ?>

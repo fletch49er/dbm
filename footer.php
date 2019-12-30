@@ -14,6 +14,8 @@
  *		03.10.2012	Underscores removed from 'ID' names.
  *		19.11.2012	php script added to create dynamic copyright year
  *		22.11.2018	dbmNotice <div> moved to dbmNotice.php
+ *		30.12.2019	ftrNavbar HTML removed. New create_navbar() function and 
+ *								ftrNavigation div added
  *
  *******************************************************************************
 */
@@ -22,8 +24,9 @@
 
 <footer class="clearfix">
 <div id="ftrNavBar">
+<div id="ftrNavigation">
 <?php echo create_navbar($policyData, '|'); ?>
-
+</div><!-- end #ftrNavigation -->
 <div id="copyright">
 website copyright &copy; mark fletcher <?php echo date('Y'); ?>. all rights reserved.
 </div><!-- end #copyright -->

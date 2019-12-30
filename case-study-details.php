@@ -12,6 +12,8 @@
  * Revision:
  *		24.02.2014	1st issue.
  *    18.04.2018  Header template header.php included
+ *		30.12.2019	Navbar page removed. New create_navbar() function and 
+ *								navigation div added
  *
  * ========================================================================
  */
@@ -91,7 +93,9 @@ endfor;
 ?>
 </div><!-- end #sub_main -->
 <div id="navBar">
-<?php require_once('navBar.php'); ?>
+<div id="navigation">
+<?php echo create_navbar($navbarData, '|'); ?>
+</div><!-- end #navigation -->
 </div><!-- end #navBar -->
 </div><!-- end #main -->
 

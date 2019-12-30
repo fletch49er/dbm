@@ -39,7 +39,9 @@ require_once('header.php');
 </div><!-- end #sub_main -->
 
 <div id="navBar">
-<?php require_once('navBar.php'); ?>
+<div id="navigation">
+<?php echo create_navbar($navbarData, '|'); ?>
+</div><!-- end #navigation -->
 </div> <!-- end #navBar -->
 </div> <!-- end #main --> 
 

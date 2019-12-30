@@ -14,6 +14,8 @@
  *		03.05.2016	address data moved to external file
  *		18.04.2018  header and footer data moved to external files
  *		29.10.2019	image carousel block added
+ *		30.12.2019	Navbar page removed. New create_navbar() function and 
+ *								navigation div added
  *
  *******************************************************************************
 */
@@ -54,25 +56,20 @@ require_once('header.php');
     setInterval(function(){plus_divs('+')}, 7000);
   </script>
 </div><!-- end #carousel -->
+
 <p class="web"><strong>designs by mark</strong> are website designers who can build affordable web related services to your specifications, which offers full control over; how your website looks; how it is accessed and utilised; and how it works within your current business plan.</p>
 <ul class="web">
-<li>static website design</li>
-<li>dynamic website design</li>
-<li>website development</li>
-<li>website maintenance</li>
-<li>web application design</li>
-<li>web application development</li>
-<li>e-commerce development</li>
-<li>search engine optimization (seo)</li>
-<li>corporate logos and graphics</li>
+<?php echo create_serviceslist($servicesData); ?>
 </ul>
 <p class="web">whether it is a one page static website or a fully functioning e-commerce application, <strong>designs by mark</strong> can assist you in achieving the right solution, without stretching the budget.</p>
 <p class="web"><strong>designs by mark</strong> will deliver what is required to fulfil your needs, whilst giving you a website that has been built on scalability and usability and maintainability. designed for the future, and not just the here and now. your investment will be well placed. make the right choice and <a href="contact.php">contact us</a> today to discuss how we can assist you further.</p>
 </div><!-- end #sub_main -->
 
 <div id="navBar">
-<?php require_once("navBar.php"); ?>
-</div> <!-- end #navBar -->
+<div id="navigation">
+<?php echo create_navbar($navbarData, '|'); ?>
+</div><!-- end #navigation -->
+</div><!-- end #navBar -->
 </div><!-- end #main -->
 
 <?php require_once('footer.php'); ?>

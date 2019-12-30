@@ -37,7 +37,7 @@ body {
 h1 {
   font-size: 20px; }
 
-h2, #navigation {
+h2, #navBar {
   font-size: 18px; }
 
 #wrapper, header, footer {
@@ -144,6 +144,9 @@ header {
   word-spacing: 0.5em; }
 
 /* footer styling ******************/
+#ftrNavigation, #copyright, #dbmNotice {
+  font-size: 10px; }
+
 footer {
   margin: 0;
   background-position: right;
@@ -157,10 +160,10 @@ footer {
   height: 50px;
   padding-left: 5px;
   line-height: 1.75em;
+  word-spacing: 0.5em;
   float: left; }
 
 #copyright {
-  font-size: 0.85em;
   color: #fff; }
 
 #ftrButtons {
@@ -175,7 +178,6 @@ footer {
 #dbmNotice {
   margin: 0 40px;
   padding: 5px 0;
-  font-size: 10px;
   text-align: right;
   color: #ffbf10; }
 
@@ -365,7 +367,7 @@ input[type=submit]:hover {
 /* policy page styling ******************/
 #policy {
   text-align: left;
-  font-size: 12px; }
+  font-size: 14px; }
 
 #policy > h2, #policy > h3, #policy > h4,
 #sitemap > h2, #sitemap > h3, #sitemap > h4,
