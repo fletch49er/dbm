@@ -7,7 +7,7 @@
   margin: 10px 0 20px 30px;
 	padding: 0px;
   width: 395px;
-  neight: 295px;
+  height: 295px;
 }
 #c_images {
 	background-color: #fff; /*white*/
@@ -58,6 +58,7 @@
 	/* main content styling */
   #carousel {
   	width: 330px;
+    height: auto;
     float: none;
     margin: 0 auto;
     padding: 0px;

@@ -1,19 +1,19 @@
 /* colour pallette ******************/
 /* background colours */
-$bg-color1: #28170b;	// dark ochre
-$bg-color2: #664C06;	// ochre
-$bg-color3: #45a049;	// green
-$bg-color4: #4caf50;	// slightly darker green
-$bg-color5: #06333f;	// darkblue
+$bg-darkochre: #28170b;	// dark ochre
+$bg-ochre: #664C06;			// ochre
+$bg-green: #45a049;			// green
+$bg-darkgreen: #4caf50;	// slightly darker green
+$bg-darkblue: #06333f;	// darkblue
 
 /* text and border colours */
-$color1: #fff;			// white
-$color2: #ffbf10; 	// amber
-$color3: #ccf;			// light-blue
-$color4: #f00;			// red
-$color5: #947729;		// ochre
-$color6: #a18f34;		// light ochre
-$color7: #ccc;			// grey
+$white: #fff;					// white
+$amber: #ffbf10; 			// amber
+$lightblue: #ccf;			// light-blue
+$red: #f00;						// red
+$ochre: #947729;			// ochre
+$lightochre: #a18f34;	// light ochre
+$grey: #ccc;					// grey
 
 
 /* fonts and texts ******************/
@@ -30,7 +30,6 @@ $text-size14: 14px;
 $text-size12: 12px;
 $text-size10: 10px;
 $text-size7: 7px;
-
 
 
 /* <div> overflow fix ******************/
@@ -55,10 +54,10 @@ body, header, #wrapper, #sidebar, #main, footer {
 	font-family: $main-font;
 }
 body, #wrapper { 
-	background-color: $bg-color1;
+	background-color: $bg-darkochre;
 }
 header, footer {
-	background-color: $bg-color2,
+	background-color: $bg-ochre,
 }
 body, #main {
 	font-size: $text-size14;
@@ -74,35 +73,43 @@ h2, #navBar {
 }
 #wrapper, header, footer {
   max-width: 960px;
-  color: $color1;
+  color: $white;
 }
 #wrapper {
   margin: 0 auto ;
 }
-#sidebar a:link, #sidebar a:visited, #main a:link, #main a:visited, 
-#navBar a:link, #navBar a:visited {
-	text-decoration: none;
-	color: $color2;
+#sidebar, #main, #navbar {
+	a:link, a:visited {
+		text-decoration: none;
+		color: $amber;
+	}
 }
-#ftrNavBar a:link, #ftrNavBar a:visited, #dbmNotice a:link, #dbmNotice a:visited,
-#policy a:link, #policy a:visited, 
-#news a:link, #news a:visited  {
-	text-decoration: underline;
-	color: $color3;
+#ftrNavBar, #dbmNotice, #policy, #news {
+	a:link, a:visited {
+  	text-decoration: underline;
+		color: $lightblue;
+	}
 }
-#sitemap a:link, #sitemap a:visited {
-	text-decoration: underline;
-	color: $color1;
+#sitemap { 
+	a:link, a:visited {
+		text-decoration: underline;
+		color: $white;
+	}
 }
-#sidebar a:hover, #main a:hover, #navBar a:hover, 
-#ftrNavBar a:hover, #dbmNotice a:hover {
-	color: $color4;
+#sidebar, #main, #navBar, #ftrNavBar, #dbmNotice {
+	a:hover {
+		color: $red;
+  }
 }
-#policy a:hover, #news a:hover  {
-	color: $color2;
+#policy, #news { 
+	a:hover  {
+		color: $amber;
+  }
 }
-#sitemap a:hover {
-	color: $color3;
+#sitemap {
+	a:hover {
+		color: $lightblue;
+  }
 }
 
 /* header styling ******************/
@@ -143,7 +150,7 @@ header {
 	z-index: 1;
 	max-width: 215px;
 	padding: 10px auto;
-	color: 	$color5;
+	color: 	$ochre;
   font-style: italic;
 	font-size: small;
 	text-align: right;
@@ -199,11 +206,10 @@ footer {
 	height: 50px;
 	padding-left: 5px;
 	line-height: 1.75em;
-  word-spacing: 0.5em;
 	float: left;
 }
 #copyright {
-	color: $color1;
+	color: $white;
 }
 #ftrButtons {
 	width: 110px;
@@ -218,13 +224,13 @@ footer {
 	margin: 0 40px;
 	padding: 5px 0;
 	text-align: right;
-	color: $color2;
+	color: $amber;
 }
 .current {
-	color: $color3; 
+	color: $lightblue; 
 }
 .slash	{
-	color: $color6; 
+	color: $lightochre; 
 }
 
 /* website page styling ******************/
@@ -235,7 +241,7 @@ footer {
 ul.web {
 	text-align: left;
 	line-height: 1.5em;
-	color: $color6;
+	color: $lightochre;
 }
 .imgBrdr {
 	margin-top: 5px;
@@ -256,7 +262,7 @@ ul.web {
   data-width: 220px;
   data-height: 425px;
   data-theme: dark;
-  data-link-color: $color6;
+  data-link-color: $lightochre;
 }
 .twitter-timeline {
     
@@ -264,7 +270,7 @@ ul.web {
 #news {
 	text-align: left;
 	line-height: 1.25em;
-	color: $color2;
+	color: $amber;
 	margin-bottom: 0;
 }
 #news > p {
@@ -318,11 +324,11 @@ sup, #pricingBlock, .pricing {
 	float: left;
 	width: 195px;
 	height: 140px;
-	background-color: $bg-color5;
+	background-color: $bg-darkblue;
 	margin: 10px 0 10px 16px;
 	padding: 10px 15px;
 	text-align: center;
-	color: $color1;
+	color: $white;
 }
 .description {
 	font-size: $text-size24;
@@ -353,7 +359,7 @@ form > * {
 input[type=text], select, textarea {
   width: 100%;
   padding: 5px;
-  border: 1px solid $color7;
+  border: 1px solid $grey;
   border-radius: 4px;
   resize: vertical;
 }
@@ -362,8 +368,8 @@ label {
   display: inline-block;
 }
 input[type=submit] {
-  background-color: $bg-color4;
-  color: $color1;
+  background-color: $bg-darkgreen;
+  color: $white;
   margin-right: 10%;
   padding: 10px 20px;
   border: none;
@@ -372,7 +378,7 @@ input[type=submit] {
   float: right;
 }
 input[type=submit]:hover {
-  background-color: $bg-color3;
+  background-color: $bg-green;
 }
 
 .col-15, .col-75, .col-85, .col-error {
@@ -403,7 +409,7 @@ input[type=submit]:hover {
   clear: both;
 }
 .valid {
-	border: solid 2px $color7;
+	border: solid 2px $grey;
 	border-radius: 5px;
 }
 .padded {
@@ -424,7 +430,7 @@ input[type=submit]:hover {
 #sitemap > h2, #sitemap > h3, #sitemap > h4,
 #policy > ul > li:before, #sitemap > ul > li:before,
 .highlight {
-	color: $color3;
+	color: $lightblue;
 }
 #policy > ul, #sitemap > ul {
 	list-style: none;
@@ -452,10 +458,10 @@ input[type=submit]:hover {
 	margin-left: 60px;
 }
 #unsubscribe {
-	color: $color2
+	color: $amber
 }
 .error {
-	color: $color4;
+	color: $red;
 }
 #graphic404 {
 	position: relative;
@@ -470,7 +476,10 @@ input[type=submit]:hover {
 	left: 225px;
 }
 
-/* responsive style amendments ******************/
+/******************************************
+ * responsive style amendments 
+ ******************************************/
+
 @media only screen and (max-width: 800px) {
 	ul.web {
 		text-align: left;

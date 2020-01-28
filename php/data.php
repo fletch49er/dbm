@@ -13,13 +13,17 @@
  * Revision:
  *		30.07.2019	1st issue.
  *		30.12.2019	$servicesData array added
+ *		13.01.2020	content of $servicesDat amended 'responsive website
+ *								design' added, 'dynamic website design' amended to
+ 									'dynamic content design'
  *
  * ========================================================================
 */
 //services offered array
 $servicesData = [
 	'static website design',
-	'dynamic website design',
+	'responsive website design',
+  'dynamic content design',
 	'website development',
 	'website maintenance',
 	'web application design',

@@ -47,14 +47,11 @@ h2, #navBar {
 #wrapper {
   margin: 0 auto; }
 
-#sidebar a:link, #sidebar a:visited, #main a:link, #main a:visited,
-#navBar a:link, #navBar a:visited {
+#sidebar a:link, #sidebar a:visited, #main a:link, #main a:visited, #navbar a:link, #navbar a:visited {
   text-decoration: none;
   color: #ffbf10; }
 
-#ftrNavBar a:link, #ftrNavBar a:visited, #dbmNotice a:link, #dbmNotice a:visited,
-#policy a:link, #policy a:visited,
-#news a:link, #news a:visited {
+#ftrNavBar a:link, #ftrNavBar a:visited, #dbmNotice a:link, #dbmNotice a:visited, #policy a:link, #policy a:visited, #news a:link, #news a:visited {
   text-decoration: underline;
   color: #ccf; }
 
@@ -62,8 +59,7 @@ h2, #navBar {
   text-decoration: underline;
   color: #fff; }
 
-#sidebar a:hover, #main a:hover, #navBar a:hover,
-#ftrNavBar a:hover, #dbmNotice a:hover {
+#sidebar a:hover, #main a:hover, #navBar a:hover, #ftrNavBar a:hover, #dbmNotice a:hover {
   color: #f00; }
 
 #policy a:hover, #news a:hover {
@@ -160,7 +156,6 @@ footer {
   height: 50px;
   padding-left: 5px;
   line-height: 1.75em;
-  word-spacing: 0.5em;
   float: left; }
 
 #copyright {
@@ -417,7 +412,9 @@ input[type=submit]:hover {
   top: 250px;
   left: 225px; }
 
-/* responsive style amendments ******************/
+/******************************************
+ * responsive style amendments 
+ ******************************************/
 @media only screen and (max-width: 800px) {
   ul.web {
     text-align: left; }
