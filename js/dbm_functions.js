@@ -26,3 +26,31 @@ function pricing(pricingObj) {
    	document.write(priceBlock);
    }
 }
+
+/*
+ * ===================================================================
+ * Script:	showPopup() & hidePopup()
+ * Purpose:	function to display and hide popup navigation menu
+ * Author:	Mark Fletcher
+ * Date:		19.04.2019
+ * 
+ * Input:
+ *	$num - php function create_navbar() counter value		
+ * 
+ * Output:		
+ * 	Dynamically changes the display style
+ *	show = block, hide = none
+ * 
+ * Notes:
+ *
+ * ==================================================================
+*/
+//showPopup function
+function  showPopup() {
+	document.getElementById('popUpMenu').style.display='block';
+}
+	
+//hidePopup function
+function hidePopup() {
+	document.getElementById('popUpMenu').style.display='none';
+}

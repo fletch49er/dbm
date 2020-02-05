@@ -14,6 +14,7 @@
  *		23.11.2018	meta viewport tab added
  *		29.10.2019	references to external javascript and css files for new
  *								image carousel function added.
+ *		05.02.2020	Responsive popup menu and icon added
  *******************************************************************************
 */
 //include login constants
@@ -70,6 +71,15 @@ try {
 <header>
 <img id="dbmGraphic" src="images/dbm_graphic.png" alt="designs by mark company logo" />
 <img id="dbmLogo" src="images/dbm_logo.png" alt="designs by mark company text" />
+<div id="resNav">
+  <img id="menuIcon" src="images/menuIcon256.png" alt="menu Icon" onclick="showPopup()" />
+  <div id="popUpMenu">
+  	<div id="menuClose" onclick="hidePopup()">
+    X
+    </div><!-- end #menuClose -->
+  	<?php echo create_navbar($navbarData, "<br/>"); ?>
+  </div><!-- end #popUpMenu -->
+</div><!-- end #resNav -->
 </header><!-- end header -->
 
 <div id="content" class="clearfix">

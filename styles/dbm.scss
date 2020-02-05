@@ -10,6 +10,7 @@ $bg-darkblue: #06333f;	// darkblue
 $white: #fff;					// white
 $amber: #ffbf10; 			// amber
 $lightblue: #ccf;			// light-blue
+$midblue: #2f2f54;		// midblue
 $red: #f00;						// red
 $ochre: #947729;			// ochre
 $lightochre: #a18f34;	// light ochre
@@ -78,7 +79,7 @@ h2, #navBar {
 #wrapper {
   margin: 0 auto ;
 }
-#sidebar, #main, #navbar {
+#sidebar, #main, #navbar, #popUpMenu {
 	a:link, a:visited {
 		text-decoration: none;
 		color: $amber;
@@ -96,7 +97,7 @@ h2, #navBar {
 		color: $white;
 	}
 }
-#sidebar, #main, #navBar, #ftrNavBar, #dbmNotice {
+#sidebar, #main, #navBar, #ftrNavBar, #dbmNotice,#popUpMenu {
 	a:hover {
 		color: $red;
   }
@@ -113,17 +114,47 @@ h2, #navBar {
 }
 
 /* header styling ******************/
+header, #dbmLogo {
+	position: relative;
+}
 header {
 	height: 100px;
 	border-radius: 100px 0 0 0;
 }
 #dbmLogo {
-	position: relative;
 	top: 35px;
 	left: 150px;
 }
-#dbmGraphic {
+#dbmGraphic, #resNav, #popUpMenu {
 	position: absolute;
+}
+#resNav, #popUpMenu {
+  top: 40px;
+  right: 10px;
+}
+#menuIcon {
+	display: none;
+	width: 50px;
+}
+#popUpMenu {
+	display: none;
+	border: 2px solid $midblue;
+	padding: 10px;
+  background-color: $bg-darkochre;
+  opacity: 0.75;
+}
+#menuClose {
+	background-color: $midblue;
+	border: 2px solid $midblue;
+  border-radius: 14px;
+  margin: -5px -5px 0px 0px;
+	width: 14px;
+  height: 14px;
+  font-weight: bolder;
+	text-align: center;
+  color: $bg-darkochre;
+  float: right;
+  cursor: pointer;  
 }
 
 /* content styling ******************/
@@ -178,7 +209,7 @@ header {
 	min-height: 550px;
 }
 
-/*navBar styling ******************/
+/* navBar styling ******************/
 #navBar {
 	height: 20px;
 }
@@ -309,7 +340,7 @@ img.caseStudy {
 	border: none;
 }
 
-/*design page styling */
+/* design page styling */
 #priceBlock {
 	margin: auto;
 }
@@ -505,6 +536,9 @@ input[type=submit]:hover {
 	}
 	#dbmGraphic {
 		z-index: 0;
+	}
+  #menuIcon {
+	display: block;
 	}
     
 	/* main content styling */

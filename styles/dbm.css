@@ -47,7 +47,7 @@ h2, #navBar {
 #wrapper {
   margin: 0 auto; }
 
-#sidebar a:link, #sidebar a:visited, #main a:link, #main a:visited, #navbar a:link, #navbar a:visited {
+#sidebar a:link, #sidebar a:visited, #main a:link, #main a:visited, #navbar a:link, #navbar a:visited, #popUpMenu a:link, #popUpMenu a:visited {
   text-decoration: none;
   color: #ffbf10; }
 
@@ -59,7 +59,7 @@ h2, #navBar {
   text-decoration: underline;
   color: #fff; }
 
-#sidebar a:hover, #main a:hover, #navBar a:hover, #ftrNavBar a:hover, #dbmNotice a:hover {
+#sidebar a:hover, #main a:hover, #navBar a:hover, #ftrNavBar a:hover, #dbmNotice a:hover, #popUpMenu a:hover {
   color: #f00; }
 
 #policy a:hover, #news a:hover {
@@ -69,17 +69,47 @@ h2, #navBar {
   color: #ccf; }
 
 /* header styling ******************/
+header, #dbmLogo {
+  position: relative; }
+
 header {
   height: 100px;
   border-radius: 100px 0 0 0; }
 
 #dbmLogo {
-  position: relative;
   top: 35px;
   left: 150px; }
 
-#dbmGraphic {
+#dbmGraphic, #resNav, #popUpMenu {
   position: absolute; }
+
+#resNav, #popUpMenu {
+  top: 40px;
+  right: 10px; }
+
+#menuIcon {
+  display: none;
+  width: 50px; }
+
+#popUpMenu {
+  display: none;
+  border: 2px solid #2f2f54;
+  padding: 10px;
+  background-color: #28170b;
+  opacity: 0.75; }
+
+#menuClose {
+  background-color: #2f2f54;
+  border: 2px solid #2f2f54;
+  border-radius: 14px;
+  margin: -5px -5px 0px 0px;
+  width: 14px;
+  height: 14px;
+  font-weight: bolder;
+  text-align: center;
+  color: #28170b;
+  float: right;
+  cursor: pointer; }
 
 /* content styling ******************/
 #content {
@@ -130,7 +160,7 @@ header {
   margin: 0px;
   min-height: 550px; }
 
-/*navBar styling ******************/
+/* navBar styling ******************/
 #navBar {
   height: 20px; }
 
@@ -254,7 +284,7 @@ img.caseStudy {
   width: 175px;
   border: none; }
 
-/*design page styling */
+/* design page styling */
 #priceBlock {
   margin: auto; }
 
@@ -437,6 +467,9 @@ input[type=submit]:hover {
 
   #dbmGraphic {
     z-index: 0; }
+
+  #menuIcon {
+    display: block; }
 
   /* main content styling */
   #sidebar {
