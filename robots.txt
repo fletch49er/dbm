@@ -1,0 +1,19 @@
+sitemap: http://www.designsbymark.co.uk/sitemap.xml
+
+User-agent: *
+Disallow: /ajax/
+Disallow: /archives/
+Disallow: /casstudies/
+Disallow: /cgi-bin/
+Disallow: /data/
+Disallow: /email/
+Disallow: /enablinginnovations/
+Disallow: /examples/
+Disallow: /jamiedoakjoinery/
+Disallow: /js/
+Disallow: /junk/
+Disallow: /php/
+Disallow: /remote_files/
+Disallow: /scgi-bin/
+Disallow: /tmp/
+
