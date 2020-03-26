@@ -30,22 +30,22 @@ include "php/data.php";
 try {
 	$pdo = new PDO('mysql:host='.AUTH_HOST.'; dbname='.AUTH_DB.'', AUTH_USER, AUTH_PWD);
 } catch (PDOException $e) {
-	die("ERROR!: Could not connect: " . $e->getMessage());
+	die("ERROR!: Could not connect: ".$e->getMessage()."<br/>");
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="description" content="<?php echo metaFill('description'); ?>" />
-<meta name="location" content="UK,Scotland,Glasgow,East Kilbride" />
-<meta name="author" content="fletch" />
-<meta name="copyright" content="(c) Mark Fletcher <?php echo date('Y'); ?>." />
-<meta name="keywords" content="web designer,web design,website design,website designer,website design glasgow,web apps,application designer,application developer" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<!-- , maximum-scale=1.0, user-scalable=0 --> 
+  <meta charset="UTF-8" />
+  <meta name="description" content="<?php echo metaFill('description'); ?>" />
+  <meta name="location" content="UK,Scotland,Glasgow,East Kilbride" />
+  <meta name="author" content="fletch" />
+  <meta name="copyright" content="(c) Mark Fletcher <?php echo date('Y'); ?>." />
+  <meta name="keywords" content="web designer,web design,website design,website designer,website design glasgow,web apps,application designer,application developer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- , maximum-scale=1.0, user-scalable=0 -->
 
-<title>designs by mark - <?php echo metaFill('title'); ?></title>
+<title>designs by mark | <?php echo metaFill('title'); ?></title>
 
 <!--Get your code at fontawesome.com-->
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>

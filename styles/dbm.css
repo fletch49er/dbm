@@ -100,11 +100,10 @@ header {
 
 #menuClose {
   background-color: #2f2f54;
-  border: 2px solid #2f2f54;
   border-radius: 14px;
   margin: -5px -5px 0px 0px;
-  width: 14px;
-  height: 14px;
+  width: 15px;
+  height: 15px;
   font-weight: bolder;
   text-align: center;
   color: #28170b;
@@ -133,11 +132,11 @@ header {
   position: relative;
   z-index: 1;
   max-width: 215px;
-  padding: 10px auto;
-  color: #947729;
+  padding: 10px 0px;
   font-style: italic;
   font-size: small;
-  text-align: right; }
+  text-align: right;
+  color: #947729; }
 
 .sideImg {
   margin: 15px 0px 15px 15px;
@@ -224,7 +223,7 @@ ul.web {
 
 .imgBrdr {
   margin-top: 5px;
-  border-width: 2px solid #ccf;
+  border: 2px solid #ccf;
   /*light-blue*/
   max-width: 100%;
   height: auto; }
@@ -236,12 +235,6 @@ ul.web {
 #twtrWidget {
   vertical-align: top;
   margin: 10px 0 auto 10px; }
-
-#twtrWidget > a {
-  data-width: 220px;
-  data-height: 425px;
-  data-theme: dark;
-  data-link-color: #a18f34; }
 
 #news {
   text-align: left;

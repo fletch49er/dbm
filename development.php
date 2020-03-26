@@ -6,8 +6,8 @@
  *						
  * Author:	Mark Fletcher
  * Date:		18.04.2018
- *  
- * Notes: 
+ *
+ * Notes:
  *
  * Revision:
  *		18.04.2018	1st issue.
@@ -16,9 +16,8 @@
  *
  *******************************************************************************
 */
-
 // include header
-include 'header.php';
+require_once('header.php');
 ?>
 <div id="sidebar">  
 <div id="address">
@@ -48,19 +47,17 @@ endif;
     
 <div id="priceBlock" class="clearfix">
 <?php
-// send query to database		
+// send query to database
 if ($result = $pdo->query($sql)) {
 	// iterate over result array
     while($row = $result->fetch()) {
-?>        
-<script>
-// create javaScript pricing block
-document.write(pricing(<?php echo $row['id']; ?>, '<?php echo $row['content']; ?>', '<?php echo $row['price']; ?>'));
-</script>
+?>
+	<div id="price<?php echo $row['id']; ?>" class="pricing">
+		<?php echo pricing($row); ?>
+  </div><!-- end #price<?php echo $row['id']; ?> -->
 <?php
-    pricing($row);
 	} // end while statement
-} else { 
+} else {
 	echo "ERROR: Could not execute $sql. " . print_r($pdo->errorInfo());
 } // end if statement
 ?>
@@ -68,10 +65,10 @@ document.write(pricing(<?php echo $row['id']; ?>, '<?php echo $row['content']; ?
 </div><!-- end #sub_main -->
 
 <div id="navBar">
-<div id="navigation">
+  <div id="navigation">
 <?php echo create_navbar($navbarData, '|'); ?>
-</div><!-- end #navigation -->
+  </div><!-- end #navigation -->
 </div> <!-- end #navBar -->
 </div><!-- end #main -->
-			
-<?php include 'footer.php'; ?>
+
+<?php require_once('footer.php'); ?>

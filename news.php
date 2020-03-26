@@ -16,7 +16,6 @@
  *
  *******************************************************************************
 */
-
 require_once("header.php");
 ?>
 
@@ -24,8 +23,10 @@ require_once("header.php");
 <div id="address">
 <?php include "address.php"; ?>
 </div><!-- end #address -->
+
 <div id="twtrWidget">
-<a class="twitter-timeline" data-lang="en" data-width="220" data-height="425" data-theme="dark" data-link-color="#A18F34" href="https://twitter.com/dbm_web?ref_src=twsrc%5Etfw">Tweets by dbm_web</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a class="twitter-timeline" data-lang="en" data-width="220" data-height="425" data-theme="dark" href="https://twitter.com/dbm_web?ref_src=twsrc%5Etfw">Tweets by dbm_web</a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div> <!-- end #twtrWidget -->
 </div> <!-- end #sidebar -->
 

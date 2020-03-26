@@ -33,6 +33,7 @@ function metaFill($filter) {
 	endif;
 	return $text;
 }
+
 /*
  * ===================================================================
  * Function:	create_sitemap()
@@ -146,11 +147,11 @@ function create_sitemap($data) {
  * Purpose:		Function to obtain page name from url
  * Author:		Mark Fletcher
  * Date:			27.11.2018
- * 
- * Input:			
+ *
+ * Input:
  * 	$_SERVER['PHP_SELF'] - current page URL
- * 
- * Output:		
+ *
+ * Output:
  * 	pageName
  * 
  * Notes:
@@ -169,13 +170,13 @@ function pageName($page) {
  * Purpose:		Create dynamic date stamp dependant on set date
  * Author:		Mark Fletcher
  * Date:			12.11.2015
- * 
- * Input:			
+ *
+ * Input:
  * 	$date - date string = 'year'
- * 
- * Output:		
+ *
+ * Output:
  * 	Returns $date_stamp - date string in format, 'year' or  'year - year'
- * 
+ *
  * Notes:
  *
  * ==================================================================
@@ -199,11 +200,11 @@ function dateStamp($date) {
  * Purpose:		Create dynamic pricing from dbmServices database table
  * Author:		Mark Fletcher
  * Date:			15.05.2018
+ *
+ * Input:
+ * 	$pricingArr - database data from dbmServices table
  * 
- * Input:			
- * 	$pricingArr - database data from dbmServices table 
- * 
- * Output:		
+ * Output:
  * 	Returns pricing blocks
  * 
  * Notes:
@@ -212,12 +213,12 @@ function dateStamp($date) {
  */
 function pricing($pricingArr) {
 	// print range of prices
-	echo '<noscript>'.PHP_EOL;
-	echo '<div id="price'.$pricingArr['id'].'" class="pricing">'.PHP_EOL;
-	echo '<p><span class="description">'.$pricingArr['content'].'</span><br />'.PHP_EOL;
-	echo '<span class="price"><sup>from</sup>&pound;'.$pricingArr['price'].'<sup>.00</sup></span></p>'.PHP_EOL;
-	echo '</div><!-- end #price'.$key.' -->'.PHP_EOL;
-    echo '</noscript>'.PHP_EOL;
+  $pricingBlock = '';
+	$pricingBlock .= '<p>';
+  $pricingBlock .= '<span class="description">'.$pricingArr['content'].'</span><br />'.PHP_EOL;
+	$pricingBlock .= '<span class="price"><sup>from</sup>&pound;'.$pricingArr['price'].'<sup>.00</sup></span>';
+	$pricingBlock .= '</p>'.PHP_EOL;
+  return $pricingBlock;
 }
 
 /*
@@ -271,7 +272,7 @@ function convertDate($dbDate) {
 
 /*
  * ===================================================================
- * Function:	convertDate()
+ * Function:	ftrButtons()
  * Purpose:		Convert date to 'dd-mm-yyyyy' format
  * Author:		Mark Fletcher
  * Date:			15.05.2018

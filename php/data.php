@@ -37,7 +37,7 @@ $servicesData = [
 $navbarData = [
 	'home' => 'index.php',
 	'news' => 'news.php',
-	'case-studies' => 'case-studies.php',
+	'portfolio' => 'portfolio.php',
 	'design' => 'design.php',
 	'development' => 'development.php',
 	'contact' => 'contact.php'
@@ -56,6 +56,6 @@ $policyData = [
 $socialMedia = [
 	'Twitter' => ['fa fa-twitter', 'https://www.twitter.com/dbm_web'],
 	'Facebook' => ['fa fa-facebook', 'https://www.facebook.com/designsbymark'],
-	'LinkedIn' => ['fa fa-linkedin', 'http://uk.linkedin.com/in/fletch49er']
+	'LinkedIn' => ['fa fa-linkedin', 'https://uk.linkedin.com/in/fletch49er']
 ];
 ?>
