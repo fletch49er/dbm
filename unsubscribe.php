@@ -14,7 +14,6 @@
  *
  *******************************************************************************
 */
-
 //inclide header
 include 'header.php';
 ?>
@@ -30,7 +29,7 @@ include 'header.php';
 <div id="unsubscribe">
 <?php 
 //if form not yet submitted display form
-if(!isset($_POST['unsubscribe'])){
+if(!isset($_POST['unsubscribe'])):
 ?>
 <form action="unsubscribe.php" method="post">
 <p>please enter your email address</p>
@@ -44,50 +43,66 @@ if(!isset($_POST['unsubscribe'])){
 		<td><input type="submit" name="unsubscribe" value="unsubscribe" /></td>
 	</tr>
 </table>
-<input type="hidden" name="issue" value=<?php echo '"'.$_GET['news'].'"'; ?> />
+<input type="hidden" name="num" value=<?php echo '"'.$_GET['num'].'"'; ?> />
+<input type="hidden" name="issue" value=<?php echo '"'.$_GET['issue'].'"'; ?> />
 </form>
 <?php 
 //if form submitted process form input
-}else{
+else :
 	//retrieve data from POST submission
 	$email = $_POST['email'];
-	$issue = $_POST['issue'];
+	$num = $_POST['num'];
+	$issue = strtoupper($_POST['issue']);
 	//set newsletter flag to '0' = 'No'
 	$newsletter = 0;
 	//set regular expresion pattern
 	$pattern = '^[a-z0-9]+@{1}[a-z0-9]+.{1}([a-z]{2,3}.{1}[a-z]{2}|[a-z]{2,3})$';
 	
 	//form validation checks
-	if(empty($email)){
-		echo "<p><span class=\"error\">ERROR:</span> You did not enter an email address. Please provide your email address.</p>\n";
-		echo "<p><a href=\"unsubscribe.php?news=".$issue."\">Return</a></p>\n";
-	}elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-		echo "<p><span class=\"error\">ERROR:</span> Invalid email address. Please re-enter a valid email address.</p>\n";
-		echo "<p><a href=\"unsubscribe.php?news=".$issue."\">Return</a></p>\n";
-	}else{
-		//formulate and send email message
-		$to = 'designsbymark@blueyonder.co.uk';
-		$from = 'mark@designsbymark.co.uk';
-		$subject = 'NEWSLETTER: Unsubscribe';
-		$body = "Email: $email\r\nNewsletter: $newsletter\r\nIssue No.: $issue";
-		if(mail($to, $subject, $body, "From: $from")){
-			echo "<h3>unsubscribe was successful!</h3>\n";
-			echo "<p>We are sorry to hear that you have decided to unsubscribe from our mailing list.</p>\n"; 
-			echo "<p>We wish you all the best in the near future.</p>\n";
-			echo "<div id=\"emoticon\">\n";
-			echo "<img src=\"images/sad_emoticon.jpg\" title=\"sad emoticon\" alt=\"sad emoticon\" />\n";
-			echo"</div>\n";
-		}else{
-			echo "<p>ERROR: Mail delivery error!</p>\n";
-		}
-	}
-}
+	if(empty($email)):
+?>
+<p><span class="error">ERROR:</span> You did not enter an email address. Please provide your email address.</p>
+<p><a href=\"unsubscribe.php?num=<?php echo $num; ?>&issue=<?php echo $issue; ?>">Return</a></p>
+<?php elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) : ?>
+
+<p><span class="error">ERROR:</span> Invalid email address. Please re-enter a valid email address.</p>
+<p><a href="unsubscribe.php?num=<?php echo $num; ?>&issue=<?php echo $issue; ?>">Return</a></p>
+<?php
+	else :
+    //formulate and send email message
+    $to = 'designsbymark@blueyonder.co.uk';
+    $from = 'mark@designsbymark.co.uk';
+    $subject = 'NEWSLETTER: Unsubscribe';
+    $body = "Email: $email\r\nNewsletter: {$num}\r\nIssue: {$issue}";
+      
+    if(mail($to, $subject, $body, "From: $from")):
+?>
+<h3>unsubscribe was successful!</h3>
+<p>We are sorry to hear that you have decided to unsubscribe from our mailing list.</p>
+<p>We wish you all the best in the near future.</p>
+<div id="emoticon">
+	<!--<img src="images/sad_emoticon.png" title="sad emoticon" alt="sad emoticon" /> -->
+</div><!-- end #emoticon -->
+
+<?php
+		else :
+?>
+
+<p>ERROR: Mail delivery error!</p>
+
+<?php 
+		endif;
+	endif;
+endif;
 ?>
 </div><!-- end unsubscribe -->
-</div> <!-- end main-->
 
 <div id="navBar">
-<?php include 'navBar.php'; ?>
+<div id="navigation">
+<?php echo create_navbar($navbarData, '|'); ?>
+</div><!-- end #navigation -->
 </div> <!-- end navBar -->
+
+</div><!-- end #main -->
 
 <?php include 'footer.php'; ?>
