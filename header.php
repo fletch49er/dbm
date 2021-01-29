@@ -3,11 +3,11 @@
  *******************************************************************************
  * File:		header.php
  * Purpose:	Website header template
- *						
+ *
  * Author:	Mark Fletcher
  * Date:		18.04.2018
- *  
- * Notes: 
+ *
+ * Notes:
  *
  * Revision:
  *		18.04.2018	1st issue.
@@ -26,7 +26,7 @@ include "php/dbm_functions.php";
 //include php data files
 include "php/data.php";
 
-//connect to database	
+//connect to database
 try {
 	$pdo = new PDO('mysql:host='.AUTH_HOST.'; dbname='.AUTH_DB.'', AUTH_USER, AUTH_PWD);
 } catch (PDOException $e) {
@@ -58,9 +58,9 @@ try {
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
 <!-- external stylesheet files -->
-<link rel="stylesheet" type="text/css" href="styles/dbm.css"  />
+<link rel="stylesheet" type="text/css" href="css/dbm.css"  />
 <!-- include carousel stylesheet -->
-<link rel="stylesheet" type="text/css" href="styles/carousel.css" />
+<link rel="stylesheet" type="text/css" href="css/carousel.css" />
 
 <!-- favicon file -->
 <link rel="Shortcut Icon" href="favicon.ico" />

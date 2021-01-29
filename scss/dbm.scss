@@ -1,21 +1,21 @@
 /* colour pallette ******************/
 /* background colours */
-$bg-black: #fff;
-$bg-darkochre: #28170b;
-$bg-ochre: #664C06;
-$bg-green: #45a049;
-$bg-darkgreen: #4caf50;
-$bg-darkblue: #06333f;
+$bg-color1: #000; /* black */
+$bg-color2: #28170b; /* darkochre */
+$bg-color3: #664C06; /* ochre */
+$bg-color4: #45a049; /* green */
+$bg-color5: #4caf50; /* darkgreen */
+$bg-color6: #06333f; /* darkblue */
 
 /* text and border colours */
-$white: #fff;
-$amber: #ffbf10;
-$lightblue: #ccf;
-$midblue: #2f2f54;
-$red: #f00;
-$ochre: #947729;
-$lightochre: #a18f34;
-$grey: #ccc;
+$color1: #fff; /* white */
+$color2: #ffbf10; /* amber */
+$color3: #ccf; /* lightblue */
+$color4: #2f2f54; /* midblue */
+$color5: #f00; /* red */
+$color6: #947729; /* ochre */
+$color7: #a18f34; /* lightochre */
+$color8: #ccc; /* grey */
 
 
 /* fonts and texts ******************/
@@ -23,15 +23,15 @@ $grey: #ccc;
 $main-font: eurostile, arial, helvetica, sans-serif;
 
 /* text sizes */
-$text-size48: 48px;
-$text-size24: 24px;
-$text-size20: 20px;
-$text-size18: 18px;
-$text-size16: 16px;
-$text-size14: 14px;
-$text-size12: 12px;
-$text-size10: 10px;
-$text-size7: 7px;
+$text-size1: 48px; /* 48px */
+$text-size2: 24px; /* 24px */
+$text-size3: 20px; /* 20px */
+$text-size4: 18px; /* 18px */
+$text-size5: 16px; /* 16px */
+$text-size6: 14px; /* 14px */
+$text-size7: 12px; /* 12px */
+$text-size8: 10px; /* 10px */
+$text-size9: 7px; /* 7px */
 
 
 /* <div> overflow fix ******************/
@@ -55,27 +55,27 @@ $text-size7: 7px;
 body, header, #wrapper, #sidebar, #main, footer {
 	font-family: $main-font;
 }
-body, #wrapper { 
-	background-color: $bg-black;
+body, #wrapper {
+	background-color: $bg-color1;
 }
 header, footer {
-	background-color: $bg-ochre,
+	background-color: $bg-color3,
 }
 body, #main {
-	font-size: $text-size14;
+	font-size: $text-size6;
 }
 body {
 	margin: 5px 0;
 }
 h1 {
-	font-size: $text-size20;
+	font-size: $text-size3;
 }
 h2, #navBar {
-	font-size: $text-size18;
+	font-size: $text-size4;
 }
 #wrapper, header, footer {
   max-width: 960px;
-  color: $white;
+  color: $color1;
 }
 #wrapper {
   margin: 0 auto ;
@@ -83,34 +83,34 @@ h2, #navBar {
 #sidebar, #main, #navbar, #popUpMenu {
 	a:link, a:visited {
 		text-decoration: none;
-		color: $amber;
+		color: $color2;
 	}
 }
 #ftrNavBar, #dbmNotice, #policy, #news {
 	a:link, a:visited {
   	text-decoration: underline;
-		color: $lightblue;
+		color: $color3;
 	}
 }
-#sitemap { 
+#sitemap {
 	a:link, a:visited {
 		text-decoration: underline;
-		color: $white;
+		color: $color1;
 	}
 }
 #sidebar, #main, #navBar, #ftrNavBar, #dbmNotice,#popUpMenu {
 	a:hover {
-		color: $red;
+		color: $color5;
   }
 }
-#policy, #news { 
+#policy, #news {
 	a:hover  {
-		color: $amber;
+		color: $color2;
   }
 }
 #sitemap {
 	a:hover {
-		color: $lightblue;
+		color: $color3;
   }
 }
 
@@ -139,22 +139,22 @@ header {
 }
 #popUpMenu {
 	display: none;
-	border: 2px solid $midblue;
+	border: 2px solid $color4;
 	padding: 10px;
-  background-color: $bg-black;
+  background-color: $bg-color1;
   opacity: 0.75;
 }
 #menuClose {
-	background-color: $midblue;
+	background-color: $color4;
   border-radius: 14px;
   margin: -5px -5px 0px 0px;
 	width: 15px;
   height: 15px;
   font-weight: bolder;
 	text-align: center;
-  color: $bg-black;
+  color: $bg-color1;
   float: right;
-  cursor: pointer;  
+  cursor: pointer;
 }
 
 /* content styling ******************/
@@ -184,7 +184,7 @@ header {
   font-style: italic;
 	font-size: small;
 	text-align: right;
-  color: 	$ochre;
+  color: 	$color6;
 }
 .sideImg {
 	margin: 15px 0px 15px 15px;
@@ -221,7 +221,7 @@ header {
 
 /* footer styling ******************/
 #ftrNavigation, #copyright, #dbmNotice {
-	font-size: $text-size10;
+	font-size: $text-size8;
 }
 
 footer {
@@ -230,7 +230,7 @@ footer {
 	border-radius: 0 0 45px 0;
 	margin-top: 10px;
 	height: 50px;
-	font-size: $text-size12;
+	font-size: $text-size7;
 }
 #ftrNavBar {
 	width: 400px;
@@ -240,7 +240,7 @@ footer {
 	float: left;
 }
 #copyright {
-	color: $white;
+	color: $color1;
 }
 #ftrButtons {
 	width: 110px;
@@ -255,13 +255,13 @@ footer {
 	margin: 0 40px;
 	padding: 5px 0;
 	text-align: right;
-	color: $amber;
+	color: $color2;
 }
 .current {
-	color: $lightblue; 
+	color: $color3;
 }
 .slash	{
-	color: $lightochre; 
+	color: $color7;
 }
 
 /* website page styling ******************/
@@ -272,7 +272,7 @@ footer {
 ul.web {
 	text-align: left;
 	line-height: 1.5em;
-	color: $lightochre;
+	color: $color7;
 }
 .imgBrdr {
 	margin-top: 5px;
@@ -283,7 +283,7 @@ ul.web {
 
 /* news page styling ******************/
 #sub_main > h2 {
-	font-size: $text-size14;
+	font-size: $text-size6;
 }
 #twtrWidget {
 	vertical-align: top;
@@ -291,12 +291,12 @@ ul.web {
 }
 
 .twitter-timeline {
-    
+
 }
 #news {
 	text-align: left;
 	line-height: 1.25em;
-	color: $amber;
+	color: $color2;
 	margin-bottom: 0;
 }
 #news > p {
@@ -308,7 +308,7 @@ ul.web {
 /* case-studies page styling ******************/
 #csTable {
 	margin: 0 auto 20px 30px;
-	max-width: 100%;	
+	max-width: 100%;
 }
 
 #csTable > table.caseStudy{
@@ -327,7 +327,7 @@ ul.web {
 .image {
 	display: inline-block;
 	-webkit-flex: auto; /* Safari 6.1+ */
-	-ms-flex: auto; /* IE 10 */ 
+	-ms-flex: auto; /* IE 10 */
 	flex: auto;
 }
 img.caseStudy {
@@ -350,17 +350,17 @@ sup, #pricingBlock, .pricing {
 	float: left;
 	width: 195px;
 	height: 140px;
-	background-color: $bg-darkblue;
+	background-color: $bg-color6;
 	margin: 10px 0 10px 16px;
 	padding: 10px 15px;
 	text-align: center;
-	color: $white;
+	color: $color1;
 }
 .description {
-	font-size: $text-size24;
+	font-size: $text-size2;
 }
 .price {
-	font-size: $text-size48;
+	font-size: $text-size1;
 	line-height: 60px;
 }
 
@@ -385,7 +385,7 @@ form > * {
 input[type=text], select, textarea {
   width: 100%;
   padding: 5px;
-  border: 1px solid $grey;
+  border: 1px solid $color8;
   border-radius: 4px;
   resize: vertical;
 }
@@ -394,8 +394,8 @@ label {
   display: inline-block;
 }
 input[type=submit] {
-  background-color: $bg-darkgreen;
-  color: $white;
+  background-color: $bg-color5;
+  color: $color1;
   margin-right: 10%;
   padding: 10px 20px;
   border: none;
@@ -404,7 +404,7 @@ input[type=submit] {
   float: right;
 }
 input[type=submit]:hover {
-  background-color: $bg-green;
+  background-color: $bg-color4;
 }
 
 .col-15, .col-75, .col-85, .col-error {
@@ -426,7 +426,7 @@ input[type=submit]:hover {
   padding: 5px 0 ;
 }
 #frmButtons {
-	
+
 }
 /* Clear floats after the columns */
 .row::after {
@@ -435,7 +435,7 @@ input[type=submit]:hover {
   clear: both;
 }
 .valid {
-	border: solid 2px $grey;
+	border: solid 2px $color8;
 	border-radius: 5px;
 }
 .padded {
@@ -450,18 +450,18 @@ input[type=submit]:hover {
 /* policy page styling ******************/
 #policy {
 	text-align: left;
-	font-size: $text-size14;
+	font-size: $text-size6;
 }
 #policy > h2, #policy > h3, #policy > h4,
 #sitemap > h2, #sitemap > h3, #sitemap > h4,
 #policy > ul > li:before, #sitemap > ul > li:before,
 .highlight {
-	color: $lightblue;
+	color: $color3;
 }
 #policy > ul, #sitemap > ul {
 	list-style: none;
   list-style-position: outside;
-     
+
 }
 #policy > ul > li:before, #sitemap > ul > li:before {
   content:'\25A0'; /* a square bullet */
@@ -484,10 +484,10 @@ input[type=submit]:hover {
 	margin-left: 60px;
 }
 #unsubscribe {
-	color: $amber
+	color: $color2
 }
 .error {
-	color: $red;
+	color: $color5;
 }
 #graphic404 {
 	position: relative;
@@ -503,7 +503,7 @@ input[type=submit]:hover {
 }
 
 /******************************************
- * responsive style amendments 
+ * responsive style amendments
  ******************************************/
 
 @media only screen and (max-width: 800px) {
@@ -514,7 +514,7 @@ input[type=submit]:hover {
     padding-right: 10px;
   }
   #navigation{
-   	font-size: $text-size16;
+   	font-size: $text-size5;
   }
 }
 
@@ -535,10 +535,10 @@ input[type=submit]:hover {
   #menuIcon {
 	display: block;
 	}
-    
+
 	/* main content styling */
 	#content {
-    
+
 	}
   #sidebar {
    	margin-top: 100px;
@@ -557,16 +557,16 @@ input[type=submit]:hover {
     padding-right: 10px;
     width: 100%;
   }
-	
+
 	/*navBar styling */
 	#navigation {
 		display: none;
 	}
-    
+
 	/* foooter styling */
 	footer {
 		height: auto;
-	} 
+	}
 	footer {
     border-radius: 0;
   }
@@ -574,18 +574,18 @@ input[type=submit]:hover {
 		float: none;
 	}
   #copyright {
-    
+
   }
   #dbmNotice {
     margin: 0;
     text-align: left;
   }
-	
+
 	/* website page styling */
 	.web {
 		margin-left: 0;
 	}
-    
+
   /* news page styling */
   #twtrWidget {
    margin-left: 35%;
