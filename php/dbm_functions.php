@@ -5,13 +5,13 @@
  * Purpose:		Function to dymamically fill in page related meta data
  * Author:		Mark Fletcher
  * Date:			27.11.2018
- * 
- * Input:			
+ *
+ * Input:
  * 	$_SERVER['PHP_SELF'] - current page URL
- * 
- * Output:		
+ *
+ * Output:
  * 	pageName
- * 
+ *
  * Notes:
  *
  * ==================================================================
@@ -20,11 +20,11 @@ function metaFill($filter) {
 	global $pdo;
 	// use pageName() function to set $pageName
 	$pageName = pageName($_SERVER['PHP_SELF']);
-	
-	// MySQL query string 
+
+	// MySQL query string
 	$sql = "SELECT id, title, pageName, description FROM dbm_metatext WHERE pageName = '".$pageName."'";
-				
-	// send query to database		
+
+	// send query to database
 	if ($result = $pdo->query($sql)) :
 		// iterate over result array
 		while($row = $result->fetch()) :
@@ -40,20 +40,20 @@ function metaFill($filter) {
  * Purpose:		function to sitmap list
  * Author:		Mark Fletcher
  * Date:			06.08.2019
- * 
- * Input:			
+ *
+ * Input:
  * $data	- a selected data array
- * 
- * Output:		
+ *
+ * Output:
  * 	Returns $list - a fully constructed HTML list
- * 
+ *
  * Notes:
  *
  * ==================================================================
 */
 function create_serviceslist($data) {
 	$services ='';
-	foreach($data as $service) { 	
+	foreach($data as $service) {
   	$services .= '<li>'.$service.'</li>'.PHP_EOL;
 	}
   return $services;
@@ -65,15 +65,15 @@ function create_serviceslist($data) {
  * Purpose:		function to create navbars
  * Author:		Mark Fletcher
  * Date:			19.04.2019
- * 
- * Input:			
+ *
+ * Input:
  * $navbarData	- a selected data array
  * $separator	- e.g. '|', ' ', ':'
- * 
- * Output:		
+ *
+ * Output:
  * 	Returns $newNavbar - a fully constructed navigation bar string
  *											 with current page highlighting
- * 
+ *
  * Notes:
  *
  * ==================================================================
@@ -113,7 +113,7 @@ function create_navbar($navbarData, $separator) {
   		$newNavbar .= '<a href="'.$url.'" title="link to '.strtolower($link).' page">'.$navLink.'</a>'.PHP_EOL;
     }
   }
-  return $newNavbar; 
+  return $newNavbar;
 }
 
 /*
@@ -122,20 +122,20 @@ function create_navbar($navbarData, $separator) {
  * Purpose:		function to sitmap list
  * Author:		Mark Fletcher
  * Date:			06.08.2019
- * 
- * Input:			
+ *
+ * Input:
  * $data	- a selected data array
- * 
- * Output:		
+ *
+ * Output:
  * 	Returns $list - a fully constructed HTML list
- * 
+ *
  * Notes:
  *
  * ==================================================================
 */
 function create_sitemap($data) {
 	$sitemap ='';
-	foreach($data as $page => $url) { 	
+	foreach($data as $page => $url) {
   	$sitemap .= '<li><a href="'.$url.'" title="open '.$page.' page">'.$page.' page</a></li>'.PHP_EOL;
 	}
   return $sitemap;
@@ -153,7 +153,7 @@ function create_sitemap($data) {
  *
  * Output:
  * 	pageName
- * 
+ *
  * Notes:
  *
  * ==================================================================
@@ -195,6 +195,31 @@ function dateStamp($date) {
 }
 
 /*
+ *******************************************************************************
+ * File:		copyright()
+ * Purpose:	function to create copyright notice for webpages
+ *
+ * Author:	Mark Fletcher
+ * Date:		18.04.2018
+ *
+ * Notes:
+ *
+ * Revision:
+ *		18.04.2018	1st issue.
+ *
+ *******************************************************************************
+*/
+//create a copyright notice
+function copyright($company, $year) {
+	if ($year == date('Y')) {
+		$date = $year;
+	} else {
+		$date = $year.' - '.date('Y');
+	}
+	echo '&copy; '.$date.' '.$company.'. All rights reserved.';
+}
+
+/*
  * ===================================================================
  * Function:	pricing()
  * Purpose:		Create dynamic pricing from dbmServices database table
@@ -203,10 +228,10 @@ function dateStamp($date) {
  *
  * Input:
  * 	$pricingArr - database data from dbmServices table
- * 
+ *
  * Output:
  * 	Returns pricing blocks
- * 
+ *
  * Notes:
  *
  * ==================================================================
@@ -227,13 +252,13 @@ function pricing($pricingArr) {
  * Purpose:		Check budget value and display 'N/A' if value is zero
  * Author:		Mark Fletcher
  * Date:			15.05.2018
- * 
- * Input:			
- * 	$value - 'budget' data from caseStudies table 
- * 
- * Output:		
+ *
+ * Input:
+ * 	$value - 'budget' data from caseStudies table
+ *
+ * Output:
  * 	$budget
- * 
+ *
  * Notes:
  *
  * ==================================================================
@@ -253,13 +278,13 @@ function budgetZero($value) {
  * Purpose:		Convert date to 'dd-mm-yyyyy' format
  * Author:		Mark Fletcher
  * Date:			15.05.2018
- * 
- * Input:			
- * 	$dbDate - 'date' data from caseStudies table 
- * 
- * Output:		
+ *
+ * Input:
+ * 	$dbDate - 'date' data from caseStudies table
+ *
+ * Output:
  * 	$newDate
- * 
+ *
  * Notes:
  *
  * ==================================================================
@@ -276,13 +301,13 @@ function convertDate($dbDate) {
  * Purpose:		Convert date to 'dd-mm-yyyyy' format
  * Author:		Mark Fletcher
  * Date:			15.05.2018
- * 
- * Input:			
- * 	$dbDate - 'date' data from caseStudies table 
- * 
- * Output:		
+ *
+ * Input:
+ * 	$dbDate - 'date' data from caseStudies table
+ *
+ * Output:
  * 	$newDate
- * 
+ *
  * Notes:
  *
  * ==================================================================

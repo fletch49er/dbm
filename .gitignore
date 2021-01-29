@@ -1,5 +1,7 @@
 # ignore list
+.*
 *~
+*.xml
 *.sql
 *.zip
 TMP*
