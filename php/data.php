@@ -2,13 +2,13 @@
 /*
  * ========================================================================
  * File:		data.php
- * Purpose: string variables, data arrays to populate website 
+ * Purpose: string variables, data arrays to populate website
  *			  	with dynamic content
- *						
+ *
  * Author:	Mark Fletcher
  * Date:		30.07.2019
- *  
- * Notes: 
+ *
+ * Notes:
  *
  * Revision:
  *		30.07.2019	1st issue.
@@ -16,9 +16,22 @@
  *		13.01.2020	content of $servicesDat amended 'responsive website
  *								design' added, 'dynamic website design' amended to
  									'dynamic content design'
+			20.11.2020	company detail constants created
  *
  * ========================================================================
 */
+// define constants
+// company details
+define ('COMPANY', 'designs by mark');
+define ('OWNER', 'Mark Fletcher');
+define ('COMPANYNO', '');
+define ('ADDRESS', '99 Mull, St. Leonards, East&nbsp;Kilbride G74 2DU, Scotland');
+define ('TELEPHONE','+44&nbsp;7745&nbsp;330905');
+define ('WEBSITE', 'https://www.designsbymark.co.uk');
+define ('EMAIL', 'mark@designsbymark.co.uk');
+define ('VATNO', '');
+define ('POLICYDATE', '01/02/2012');
+
 //services offered array
 $servicesData = [
 	'static website design',

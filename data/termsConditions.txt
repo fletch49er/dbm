@@ -1,6 +1,7 @@
 <h2>Terms &amp; Conditions</h2>
-<p>Welcome to our website. If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern <span style="color: #cff">designs by mark's</span> relationship with you in relation to this website. If you disagree with any part of these terms and conditions, please do not use our website.</p>
-<p>The term 'designs by mark' or 'us' or 'we' refers to the owner of the website whose registered office is <span style="color: #cff">99 Mull, St. Leonards, East Kilbride G74 2DU</span>. The term 'you' refers to the user or viewer of our website.</p>
+<p>Welcome to our website, <span class="highlight"><?php echo WEBSITE; ?></span>. If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern <span class="highlight"><?php echo COMPANY; ?></span> relationship with you in relation to this website. If you disagree with any part of these terms and conditions, please do not use our website.</p>
+<p>The term '<?php echo COMPANY; ?>' or 'us' or 'we' refers to the owner of the website whose registered office is: <span class="highlight"><?php echo ADDRESS; ?></span>.</p>
+<p>The term 'you' refers to the user or viewer of our website.</p>
 <p>The use of this website is subject to the following terms of use:</p>
 <ul>
 <li>The content of the pages of this website is for your general information and use only. It is subject to change without notice.</li>
