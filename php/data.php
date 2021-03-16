@@ -25,9 +25,10 @@
 define ('COMPANY', 'designs by mark');
 define ('OWNER', 'Mark Fletcher');
 define ('COMPANYNO', '');
-define ('ADDRESS', '99 Mull, St. Leonards, East&nbsp;Kilbride G74 2DU, Scotland');
+define ('ADDRESS', '99&nbsp;Mull, St.&nbsp;Leonards, East&nbsp;Kilbride G74 2DU, Scotland');
 define ('TELEPHONE','+44&nbsp;7745&nbsp;330905');
 define ('WEBSITE', 'https://www.designsbymark.co.uk');
+define ('PUB_YEAR', 2004);
 define ('EMAIL', 'mark@designsbymark.co.uk');
 define ('VATNO', '');
 define ('POLICYDATE', '01/02/2012');

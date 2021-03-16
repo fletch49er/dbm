@@ -5,3 +5,7 @@
 *.sql
 *.zip
 TMP*
+*.jpeg
+*.jpg
+*.png
+*.gif

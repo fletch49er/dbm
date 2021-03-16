@@ -1,17 +1,17 @@
-<?php 
+<?php
 /*
  *******************************************************************************
  * File:		policy.php
  * Purpose: website policy template page
- *						
+ *
  * Author:	Mark Fletcher
  * Date:		18.04.2018
- *  
- * Notes: 
+ *
+ * Notes:
  *
  * Revision:
  *		18.04.2018	1st issue.
- *		30.12.2019	Navbar page removed. New create_navbar() function and 
+ *		30.12.2019	Navbar page removed. New create_navbar() function and
  *								navigation div added
  *
  *******************************************************************************
@@ -27,10 +27,12 @@ $policyPages = [
 //inclide header
 require_once('header.php');
 ?>
-<div id="sidebar">  
+<div id="sidebar">
 <div id="address">
 <?php include 'address.php'; ?>
 </div><!-- end #address -->
+<img class="sideImg" src="images/gs-pr_page.png" title="golfscotland.net website - MDA Media Ltd" alt="MDA Media Ltd golfscotland.net" />
+<img class="sideImg" src="images/mda-graphics.gif" title="Proposed graphics - MDA Media Ltd" alt="MDA Media Ltd graphic proposals" />
 </div><!-- end sidebar -->
 
 <div id="main">

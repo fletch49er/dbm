@@ -3,15 +3,15 @@
  *******************************************************************************
  * File:		contact.php
  * Purpose:	website contact page
- *						
+ *
  * Author:	Mark Fletcher
  * Date:		18.04.2018
- *  
+ *
  * Notes:
  *
  * Revision:
  *		18.04.2018	1st issue.
- *		30.12.2019	Navbar page removed. New create_navbar() function and 
+ *		30.12.2019	Navbar page removed. New create_navbar() function and
  *								navigation div added
  *
  *******************************************************************************
@@ -19,16 +19,18 @@
 // include header
 require_once('header.php');
 ?>
-<div id="sidebar">  
-<div id="address">
+<div id="sidebar">
+	<div id="address">
 <?php include "address.php"; ?>
-</div><!-- end #address -->
+	</div><!-- end #address -->
 
-<img id="myPhoto" src="images/fletch_photo.jpg" alt="Mark Fletcher - Cert Web Apps (Open)" />
-<p id="myTitle">
-mark fletcher<br />
-cert web apps (open)
-</p>
+	<div id="myImg">
+		<img id="myPhoto" src="images/fletch_photo.jpg" alt="Mark Fletcher - Cert Web Apps (Open)" />
+		<p id="myTitle">
+			mark fletcher<br />
+			cert web apps (open)
+		</p>
+	</div><!-- end myImg-->
 </div><!-- end #sidebar -->
 
 <div id="main">
@@ -65,7 +67,7 @@ if(!isset($_POST['submit'])){
 <div id="telError" class="col-error"></div>
 </div><!-- end .row -->
 
-<div class="row"> 
+<div class="row">
 <div class="col-15">
 	<label for="emailForm">Email:</label>
 </div><!-- end .col-15 -->
@@ -75,7 +77,7 @@ if(!isset($_POST['submit'])){
 <div id="emailError" class="col-error"></div>
 </div><!-- end .row -->
 
-<div class="row"> 
+<div class="row">
 <div class="col-15">
 <label for="domainForm">Domain:</label>
 </div><!-- end .col-15 -->
@@ -85,7 +87,7 @@ if(!isset($_POST['submit'])){
 <div id="domainError" class="col-error"></div>
 </div><!-- end .row -->
 
-<div class="row"> 
+<div class="row">
 <div class="col-15">
 	Enquiry:
 </div><!-- end .col-15 -->
@@ -107,7 +109,7 @@ if(!isset($_POST['submit'])){
 </div><!-- end .col-85 -->
 </div><!-- end .row -->
 
-<div class="row"> 
+<div class="row">
 <div class="col-15">
 	Size:
 </div><!-- end .col-15 -->
@@ -115,13 +117,13 @@ if(!isset($_POST['submit'])){
 	<input id="pages1" type="radio" name="pages" value="1" />
 	<label for="pages1">1 page</label>&nbsp;&nbsp;
 	<input id="pages2" type="radio" name="pages" value="5" checked="checked" />
-	<label for="pages2">5 pages</label>&nbsp;&nbsp; 
+	<label for="pages2">5 pages</label>&nbsp;&nbsp;
 	<input id="pages3" type="radio" name="pages" value="5&#43;" />
 	<label for="pages3">5&#43; pages</label>&nbsp;&nbsp;&nbsp;(approx).
 </div><!-- end .col-85 -->
 </div><!-- end .row -->
 
-<div class="row"> 
+<div class="row">
 <div id="frmButtons">
 	<input type="submit" name="submit" value="Send Enquiry" />
 </div><!-- end #frmbuttons -->
@@ -131,7 +133,7 @@ if(!isset($_POST['submit'])){
 <p id="contact3">
 or email a more detailed enquiry to the following address <a href="mailto:mark@designsbymark.co.uk">mark@designsbymark.co.uk</a>
 </p>
-<?php 
+<?php
 }else{
 	//assign variables to POST submissions
 	$name = trim($_POST['name']);
@@ -148,7 +150,7 @@ or email a more detailed enquiry to the following address <a href="mailto:mark@d
 	$phonePattern =  "/^((\+44\s?\(0\)\s?\d{2,4})|(\+44\s?(01|02|03|07|08)\d{2,3})|(\+44\s?(1|2|3|7|8)\d{2,3})|(\(\+44\)\s?\d{3,4})|(\(\d{5}\))|((01|02|03|07|08)\d{2,3})|(\d{5}))(\s|-|.)(((\d{3,4})(\s|-)(\d{3,4}))|((\d{6,7})))$/";
 	$emailPattern = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/";
 	$domainPattern = "/^none|^([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])\.)+[a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?$/";
-	
+
 	//validate submitted data
 	//check name
 	if (!preg_match($namePattern, $name)) {
@@ -198,14 +200,14 @@ EOT;
 EOT;
 		$valid = false;
 	}
-	
+
 	//Display error prompt
 	if ($valid == false) {
 		echo <<<EOT
 			<h3>Please click <a href="contact.php">contact</a> and enter the correct form data.</h3>
 EOT;
 	}
-				
+
  	//If valid then allow submit and email data
 	if ($valid == true) {
 		//create $service string

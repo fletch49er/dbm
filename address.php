@@ -3,26 +3,25 @@
 	*******************************************************************************
  * File:		address.php
  * Purpose:	Company address template
- *						
+ *
  * Author:	Mark Fletcher
  * Date:		03.05.2016
- *  
- * Notes: 
+ *
+ * Notes:
  *
  * Revision:
  *		03.05.2016	1st issue.
- *		23.11.2018	<address> and <a mailto: > tags added	
+ *		23.11.2018	<address> and <a mailto: > tags added
+ *    15.03.2021  Block address function added, constants added
+ 8                (see data.php file)
  *
  *******************************************************************************
 */
 ?>
 <address>
-99 mull<br />
-st. leonards<br />
-east kilbride<br />
-G74 2DU<br />
+  <?php block_address(ADDRESS); ?>
 </address>
 <br />
-t: <a href="tel:+447745330905">+44&nbsp;7745&nbsp;330905</a><br />
+t: <a href="mailto:<?php echo TELEPHONE; ?>"><?php echo TELEPHONE; ?></a><br />
 <br />
-e: <a href="mailto:mark@designsbymark.co.uk">mark@designsbymark.co.uk</a>
+e: <a href="mailto:<?php echo EMAIL; ?>"><?php echo EMAIL; ?></a><br />

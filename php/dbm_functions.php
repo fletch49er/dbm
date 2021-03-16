@@ -15,7 +15,7 @@
  * Notes:
  *
  * ==================================================================
- */
+*/
 function metaFill($filter) {
 	global $pdo;
 	// use pageName() function to set $pageName
@@ -235,7 +235,7 @@ function copyright($company, $year) {
  * Notes:
  *
  * ==================================================================
- */
+*/
 function pricing($pricingArr) {
 	// print range of prices
   $pricingBlock = '';
@@ -262,7 +262,7 @@ function pricing($pricingArr) {
  * Notes:
  *
  * ==================================================================
- */
+*/
 function budgetZero($value) {
 	if($value == 0.00) {
 		$budget = 'N/A';
@@ -288,7 +288,7 @@ function budgetZero($value) {
  * Notes:
  *
  * ==================================================================
- */
+*/
 function convertDate($dbDate) {
     $dateArray = explode('-', $dbDate);
     $newDate = $dateArray[2].'-'.$dateArray[1].'-'.$dateArray[0];
@@ -311,7 +311,7 @@ function convertDate($dbDate) {
  * Notes:
  *
  * ==================================================================
- */
+*/
 function ftrButtons($media, $main_color, $inv_color) {
 	foreach($media as $social => $data) {
 		echo '<div class="ftrBox"><!-- '.$social.' button -->'.PHP_EOL;
@@ -320,6 +320,34 @@ function ftrButtons($media, $main_color, $inv_color) {
     echo '<i class="'.$data[0].' fa-stack-1x fa-inverse" title="Follow Us on '.$social.'" style="color: '.$inv_color.';"></i>'.PHP_EOL;
     echo '</span></a>'.PHP_EOL;
    	echo '</div><!-- end .ftrBox -->'.PHP_EOL;
+	}
+}
+
+/*
+ * ==================================================================
+ * File:		block_address()
+ * Purpose:	function to write address string in a block
+ * Author:	Mark Fletcher
+ * Date:		08.03.2021
+ *
+ * Input:
+ * 	$add - address string
+ *
+ * Output:
+ * 	address string as a block
+ *
+ * Notes:
+ *
+ * ==================================================================
+*/
+function block_address($add) {
+	$address = explode(', ', $add);
+	for($x = 0; $x < count($address); $x++) {
+  	if($x != (count($address)-1)) {
+    	echo $address[$x].',<br />';
+  	} else {
+    	echo $address[$x];
+  	}
 	}
 }
 ?>

@@ -1,0 +1,7 @@
+﻿*** Project Postponed ***
+
+Designed corporate logo and website style to suite.
+
+Graphics for page headers and footers were designed; JavaScript based image slideshow developed; dynamic contact (data capture) form created using JavaScript and PHP techniques; and a dynamic T&Cs and policies page developed using PHP scriptings. 
+
+All in anticipation of client giving content to populate the website.

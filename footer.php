@@ -23,18 +23,18 @@
 </div><!-- end #content -->
 
 <footer class="clearfix">
-<div id="ftrNavBar">
-<div id="ftrNavigation">
+  <div id="ftrNavBar">
+    <div id="ftrNavigation">
 <?php echo create_navbar($policyData, '|'); ?>
-</div><!-- end #ftrNavigation -->
-<div id="copyright">
-website copyright &copy; mark fletcher <?php echo date('Y'); ?>. all rights reserved.
-</div><!-- end #copyright -->
-</div><!-- end #ftrNavBar -->
+    </div><!-- end #ftrNavigation -->
+    <div id="copyright">
+<?php copyright(OWNER, PUB_YEAR); ?>
+    </div><!-- end #copyright -->
+  </div><!-- end #ftrNavBar -->
 
-<div id ="ftrButtons">
+  <div id ="ftrButtons">
 <?php ftrButtons($socialMedia, '#000', '#664C06'); ?>
-</div><!-- end #ftrButtons -->
+  </div><!-- end #ftrButtons -->
 </footer><!-- end footer -->
 
 <?php include 'dbmNotice.php'; ?>

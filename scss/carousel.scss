@@ -1,0 +1,126 @@
+/* colour pallette ******************/
+/* background colours */
+$bg-color1: #fff; /* white */
+$bg-color2: #333; /* darkgrey */
+
+/* text and border colours */
+$color1: #fff; /* white */
+$color2: #ccc; /* grey */
+
+#carousel {
+	position: relative;
+	background-color: $bg-color2;
+  border: 1px solid $color2;
+  vertical-align: bottom;
+	float: right;
+  margin: 10px 0 20px 30px;
+	padding: 0px;
+  width: 395px;
+  min-height: 295px;
+}
+#c_images {
+	background-color: $bg-color1;
+	width: 100%;
+  padding: 0px;
+}
+#c_images > a > img {
+	width: 100%;
+  padding: 0px;
+}
+#c_controls {
+	position: absolute;
+  bottom: 0px;
+  z-index: +1;
+  background-color: $bg-color2;
+  opacity: 0.75;
+	width: 96%;
+	height: 30px;
+  padding: 2%;
+  color: $color1;
+}
+#c_icons {
+	display: inline-block;
+	width: 80%;
+	margin: 0px;
+  text-align: left;
+}
+.c_dots, .c_arrows {
+	margin: 0px 10px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.c_arrows {
+  font-size: 28px;
+}
+.c_dots {
+  font-size: 12px;
+}
+#c_count {
+	display: inline-block;
+  float: right;
+	width: 40px;
+	border: 1px solid $color1;
+  margin-right: 5px;
+  padding: 2px 5px;
+}
+
+/******************************************
+ * responsive style amendments
+ ******************************************/
+
+@media only screen and (max-width: 930px) {
+	#carousel {
+
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	/* main content styling */
+  #carousel {
+  	width: 95%;
+    height: auto;
+    float: none;
+    margin: 0 auto;
+    padding: 0px;
+	}
+  #c_controls {
+
+  }
+  #c_icons {
+		width: 70%;
+	}
+  .c_dots, .c_arrows {
+		margin: 0px 5px;
+  	vertical-align: middle;
+  	cursor: pointer;
+	}
+}
+
+@media only screen and (max-width: 360px) {
+	/* main content styling */
+  #carousel {
+  	width: 95%;
+    height: auto;
+    float: none;
+    margin: 0 auto;
+    padding: 0px;
+	}
+  #c_controls {
+
+  }
+  #c_icons {
+		width: 70%;
+	}
+  .c_dots, .c_arrows {
+		margin: 0px 4px;
+  	vertical-align: middle;
+  	cursor: pointer;
+	}
+
+	.c_arrows {
+	  font-size: 24px;
+	}
+	.c_dots {
+	  font-size: 10px;
+	}
+}
